@@ -23,7 +23,9 @@
     <object>objects\text_score</object>
     <object>objects\orb_spawn</object>
   </objects>
-  <rooms name="rooms"/>
+  <rooms name="rooms">
+    <room>rooms\room0</room>
+  </rooms>
   <help>
     <rtf>help.rtf</rtf>
   </help>
