@@ -17,13 +17,11 @@
   </backgrounds>
   <paths name="paths"/>
   <objects name="objects">
-    <object>objects\obj_block</object>
     <object>objects\block_floor</object>
     <object>objects\obj_char</object>
-    <object>objects\obj_orb_parent</object>
-    <object>objects\orb1</object>
+    <object>objects\orb</object>
     <object>objects\text_score</object>
-    <object>objects\BGM_Stage</object>
+    <object>objects\orb_spawn</object>
   </objects>
   <rooms name="rooms">
     <room>rooms\room0</room>
