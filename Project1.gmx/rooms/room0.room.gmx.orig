@@ -31,7 +31,15 @@
     <yoffset>0</yoffset>
   </makerSettings>
   <backgrounds>
+<<<<<<< HEAD
     <background visible="-1" foreground="0" name="background0" x="0" y="0" htiled="-1" vtiled="0" hspeed="-10" vspeed="0" stretch="0"/>
+=======
+<<<<<<< HEAD
+    <background visible="-1" foreground="0" name="background0" x="0" y="0" htiled="-1" vtiled="0" hspeed="-10" vspeed="0" stretch="0"/>
+=======
+    <background visible="-1" foreground="0" name="background0" x="0" y="0" htiled="0" vtiled="0" hspeed="-1" vspeed="0" stretch="-1"/>
+>>>>>>> 48c3b7ab7531978d494d77bcbc48987c4a9b67d4
+>>>>>>> cd3d3d6b838858350cc4f58f1e19dedfa6e51f4c
     <background visible="0" foreground="0" name="" x="0" y="0" htiled="-1" vtiled="-1" hspeed="0" vspeed="0" stretch="0"/>
     <background visible="0" foreground="0" name="" x="0" y="0" htiled="-1" vtiled="-1" hspeed="0" vspeed="0" stretch="0"/>
     <background visible="0" foreground="0" name="" x="0" y="0" htiled="-1" vtiled="-1" hspeed="0" vspeed="0" stretch="0"/>
