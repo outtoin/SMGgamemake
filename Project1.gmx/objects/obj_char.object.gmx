@@ -26,13 +26,14 @@
           <argument>
             <kind>1</kind>
             <string>///Initialize Variables
-grav = 0.3;
+grav = 0.4;
 hsp = 0;
 vsp = 0;
-jumpspeed = 10;
+jumpspeed = 11;
 movespeed = 4;
 
-scr = 0;
+jump_count = 0;
+jump_max = 2;
 </string>
           </argument>
         </arguments>
@@ -67,9 +68,16 @@ if (vsp &lt; 10) vsp += grav;
 
 if (place_meeting(x,y+1,block_floor))
 {
-    vsp = key_jump * -jumpspeed
+    jump = jump_max ;
 }
 
+if (key_jump) &amp;&amp; (jump&gt;0)
+{
+    jump -= 1;
+    vsp = -jumpspeed;
+}
+
+/* Bind Horizontal Move
 ///horizontal collision
 if (place_meeting(x+hsp,y,block_floor))
 {
@@ -82,6 +90,7 @@ if (place_meeting(x+hsp,y,block_floor))
 
 
 x += hsp;
+*/
 
 ///vertical collision
 if (place_meeting(x,y+vsp,block_floor))
