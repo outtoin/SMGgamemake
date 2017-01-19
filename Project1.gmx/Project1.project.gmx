@@ -6,7 +6,8 @@
   <NewExtensions/>
   <sounds name="sound"/>
   <sprites name="sprites">
-    <sprite>sprites\char</sprite>
+    <sprite>sprites\char_run</sprite>
+    <sprite>sprites\char_atk</sprite>
     <sprite>sprites\tile1</sprite>
     <sprite>sprites\spr_orb</sprite>
     <sprite>sprites\spr_menuarrow</sprite>
