@@ -4,27 +4,32 @@
     <Config>Configs\Default</Config>
   </Configs>
   <NewExtensions/>
-  <sounds name="sound">
-    <sound>sound\Stage</sound>
-  </sounds>
+  <sounds name="sound"/>
   <sprites name="sprites">
     <sprite>sprites\char</sprite>
     <sprite>sprites\tile1</sprite>
-    <sprite>sprites\sprite2</sprite>
+    <sprite>sprites\spr_orb</sprite>
+    <sprite>sprites\spr_menuarrow</sprite>
   </sprites>
   <backgrounds name="background">
-    <background>background\background0</background>
+    <background>background\GameBackground</background>
+    <background>background\Main</background>
   </backgrounds>
   <paths name="paths"/>
+  <scripts name="scripts">
+    <script>scripts\scr_menu.gml</script>
+  </scripts>
   <objects name="objects">
     <object>objects\block_floor</object>
     <object>objects\obj_char</object>
     <object>objects\orb</object>
     <object>objects\text_score</object>
     <object>objects\orb_spawn</object>
+    <object>objects\obj_menu</object>
   </objects>
   <rooms name="rooms">
-    <room>rooms\room0</room>
+    <room>rooms\Mainmenu</room>
+    <room>rooms\InGame</room>
   </rooms>
   <help>
     <rtf>help.rtf</rtf>

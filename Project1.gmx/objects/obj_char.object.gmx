@@ -26,10 +26,10 @@
           <argument>
             <kind>1</kind>
             <string>///Initialize Variables
-grav = 0.4;
+grav = 1;
 hsp = 0;
 vsp = 0;
-jumpspeed = 11;
+jumpspeed = 22;
 movespeed = 4;
 
 jump_count = 0;
@@ -62,8 +62,8 @@ key_left = -keyboard_check(vk_left);
 key_jump = keyboard_check_pressed(vk_shift);
 
 ///React to inputs
-move = key_left + key_right;
-hsp = move * movespeed;
+/*move = key_left + key_right;
+hsp = move * movespeed; */
 if (vsp &lt; 10) vsp += grav;
 
 if (place_meeting(x,y+1,block_floor))
