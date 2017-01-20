@@ -2,11 +2,12 @@ switch (menu_pos)
 {
     case 0:
     {
-        room_goto_next();
+        room_goto(InGame);
         break;
     }
     case 1:
-    {
+    {   
+        room_goto(Options);
         break;
     }
     case 2:
