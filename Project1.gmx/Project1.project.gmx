@@ -20,6 +20,10 @@
   <scripts name="scripts">
     <script>scripts\scr_menu.gml</script>
   </scripts>
+  <fonts name="fonts">
+    <font>fonts\ArcadeClassic</font>
+    <font>fonts\FFFforward</font>
+  </fonts>
   <objects name="objects">
     <object>objects\block_floor</object>
     <object>objects\text_score</object>
@@ -35,6 +39,7 @@
   <rooms name="rooms">
     <room>rooms\Mainmenu</room>
     <room>rooms\InGame</room>
+    <room>rooms\Options</room>
   </rooms>
   <help>
     <rtf>help.rtf</rtf>

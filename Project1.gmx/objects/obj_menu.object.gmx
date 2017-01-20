@@ -94,17 +94,20 @@ if (push == 1) scr_menu();
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>draw_set_halign(fa_left);
+            <string>//Menu text settings
+draw_set_halign(fa_left);
 draw_set_valign(fa_middle);
-
+draw_set_font(FFFforward);
 draw_set_color(c_white);
+
+//Menu text implement
 var m;
 for ( m = 0; m &lt; array_length_1d(menu); m += 1)
 {
     draw_text(x + space, y + (m * space), string(menu[m]));
 }
 
-draw_sprite(sprite_index, 0, x + 16, y + menu_pos * space)
+draw_sprite(sprite_index, 0, x + 8, y + menu_pos * space)
 </string>
           </argument>
         </arguments>
