@@ -9,12 +9,14 @@
     <sprite>sprites\char_run</sprite>
     <sprite>sprites\char_atk</sprite>
     <sprite>sprites\tile1</sprite>
-    <sprite>sprites\spr_orb</sprite>
-    <sprite>sprites\spr_menuarrow</sprite>
+    <sprite>sprites\orb_health</sprite>
+    <sprite>sprites\orb_score</sprite>
+    <sprite>sprites\menuarrow</sprite>
   </sprites>
   <backgrounds name="background">
     <background>background\GameBackground</background>
     <background>background\Main</background>
+    <background>background\GamoverBackground</background>
   </backgrounds>
   <paths name="paths"/>
   <scripts name="scripts">
@@ -28,10 +30,12 @@
     <object>objects\block_floor</object>
     <object>objects\text_score</object>
     <object>objects\obj_char</object>
-    <object>objects\obj_orb</object>
+    <object>objects\obj_orb_score</object>
+    <object>objects\obj_orb_health</object>
+    <object>objects\obj_health</object>
     <object>objects\obj_orbspawn</object>
     <object>objects\obj_menu</object>
-    <object>objects\obj_health</object>
+    <object>objects\obj_gameover</object>
   </objects>
   <timelines name="timelines">
     <timeline>timelines\obj_health_basic_decrease</timeline>
@@ -40,6 +44,7 @@
     <room>rooms\Mainmenu</room>
     <room>rooms\InGame</room>
     <room>rooms\Options</room>
+    <room>rooms\Gameover</room>
   </rooms>
   <help>
     <rtf>help.rtf</rtf>

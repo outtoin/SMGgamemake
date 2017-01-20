@@ -81,10 +81,15 @@ time = 0;
           <argument>
             <kind>1</kind>
             <string>time += 1;
-if (time==10 &amp;&amp; hp != 0)
+if (time==30)
 {
-    time = 0;
-    hp -= 1;
+        time = 0;
+        hp -= 5;
+}
+
+if (hp==0)
+{
+    room_goto(Gameover);
 }
 
 
@@ -126,7 +131,7 @@ if (time==10 &amp;&amp; hp != 0)
 
 draw_set_color(c_black);
 draw_text(360,24,hp);
-draw_text(360,60,time);
+//draw_text(360,60,time);
 
 draw_set_color(c_black);
 draw_rectangle(12,12,340,36,0);
