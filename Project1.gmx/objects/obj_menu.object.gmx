@@ -25,9 +25,9 @@
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>menu[0] = "Start";
+            <string>menu[0] = "Game Start";
 menu[1] = "Options";
-menu[2] = "Quit";
+menu[2] = "Exit";
 
 space = 64;
 menu_pos = 0;
