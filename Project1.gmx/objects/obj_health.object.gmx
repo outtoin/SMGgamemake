@@ -81,10 +81,12 @@ time = 0;
           <argument>
             <kind>1</kind>
             <string>time += 1;
-if (time==60)
+if (time==10 &amp;&amp; hp != 0)
 {
     time = 0;
+    hp -= 1;
 }
+
 
 /*while(hp == 0)
 {
