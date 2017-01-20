@@ -65,7 +65,7 @@
     <instance objName="block_floor" x="-32" y="32" name="inst_B3816931" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="block_floor" x="-32" y="0" name="inst_5EDD73ED" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="text_score" x="1312" y="32" name="inst_460C2D71" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="orb_spawn" x="1312" y="64" name="inst_8793408E" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_orbspawn" x="1312" y="64" name="inst_8793408E" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="block_floor" x="-32" y="416" name="inst_0C78192B" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="block_floor" x="-32" y="448" name="inst_735FA7CF" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="block_floor" x="-32" y="480" name="inst_94236759" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
@@ -155,6 +155,7 @@
     <instance objName="block_floor" x="448" y="704" name="inst_2FF2F830" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="block_floor" x="416" y="704" name="inst_563DCAC6" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_char" x="128" y="656" name="inst_A0092305" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_health" x="1312" y="96" name="inst_F3C8B701" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
   </instances>
   <tiles/>
   <PhysicsWorld>0</PhysicsWorld>

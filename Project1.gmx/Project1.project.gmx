@@ -22,12 +22,16 @@
   </scripts>
   <objects name="objects">
     <object>objects\block_floor</object>
-    <object>objects\obj_char</object>
-    <object>objects\orb</object>
     <object>objects\text_score</object>
-    <object>objects\orb_spawn</object>
+    <object>objects\obj_char</object>
+    <object>objects\obj_orb</object>
+    <object>objects\obj_orbspawn</object>
     <object>objects\obj_menu</object>
+    <object>objects\obj_health</object>
   </objects>
+  <timelines name="timelines">
+    <timeline>timelines\obj_health_basic_decrease</timeline>
+  </timelines>
   <rooms name="rooms">
     <room>rooms\Mainmenu</room>
     <room>rooms\InGame</room>
