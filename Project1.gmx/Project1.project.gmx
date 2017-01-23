@@ -4,7 +4,9 @@
     <Config>Configs\Default</Config>
   </Configs>
   <NewExtensions/>
-  <sounds name="sound"/>
+  <sounds name="sound">
+    <sound>sound\BGM_Stage</sound>
+  </sounds>
   <sprites name="sprites">
     <sprite>sprites\char_run</sprite>
     <sprite>sprites\char_atk</sprite>
@@ -36,6 +38,8 @@
     <object>objects\obj_orbspawn</object>
     <object>objects\obj_menu</object>
     <object>objects\obj_gameover</object>
+    <object>objects\snd_StageBGM</object>
+    <object>objects\snd_Gameover</object>
   </objects>
   <timelines name="timelines">
     <timeline>timelines\obj_health_basic_decrease</timeline>
