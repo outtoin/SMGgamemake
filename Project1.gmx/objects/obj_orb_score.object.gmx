@@ -25,7 +25,9 @@
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>while (y&gt;672 || y&lt;160)
+            <string>orb_spd = 0;
+
+while (y&gt;672 || y&lt;160)
 {
     y = random(room_height);
 }
@@ -51,27 +53,23 @@
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>x += -4 ;
+            <string>if(obj_char.mode == 0)
+{
+    orb_spd = -4 ;
+}
+
+if(obj_char.mode == 1)
+{
+    orb_spd = 0;
+}
+
+x += orb_spd;
 </string>
           </argument>
         </arguments>
       </action>
     </event>
     <event eventtype="4" ename="obj_char">
-      <action>
-        <libid>1</libid>
-        <id>203</id>
-        <kind>0</kind>
-        <userelative>0</userelative>
-        <isquestion>0</isquestion>
-        <useapplyto>-1</useapplyto>
-        <exetype>1</exetype>
-        <functionname>action_kill_object</functionname>
-        <codestring></codestring>
-        <whoName>self</whoName>
-        <relative>0</relative>
-        <isnot>0</isnot>
-      </action>
       <action>
         <libid>1</libid>
         <id>603</id>
@@ -88,7 +86,11 @@
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>score = score + 10 ;
+            <string>if(obj_char.mode == 0)
+{
+    instance_destroy();
+    score = score + 10 ;
+}
 </string>
           </argument>
         </arguments>

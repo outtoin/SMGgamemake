@@ -25,7 +25,9 @@
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>while (y&gt;672 || y&lt;160)
+            <string>orb_spd = 0;
+
+while (y&gt;672 || y&lt;160)
 {
     y = random(room_height);
 }
@@ -51,7 +53,17 @@
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>x += -8 ;
+            <string>if(obj_char.mode == 0)
+{
+    orb_spd = -8 ;
+}
+
+if(obj_char.mode == 1)
+{
+    orb_spd = 0;
+}
+
+x += orb_spd;
 </string>
           </argument>
         </arguments>
@@ -88,9 +100,11 @@
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>obj_health.hp = obj_health.hp + 10 ;
-
-if (obj_health.hp &gt; 100) obj_health.hp = 100;
+            <string>if(obj_char.mode == 0)
+{
+    obj_health.hp = obj_health.hp + 10 ;
+    if (obj_health.hp &gt; 100) obj_health.hp = 100;
+}
 </string>
           </argument>
         </arguments>

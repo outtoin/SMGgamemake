@@ -49,7 +49,7 @@ time = 0;
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>/// hp basic decrease timeline
+            <string>/// hp basic decrease timeline -&gt; x using
 
 /*
     timeline_index = obj_health_basic_decrease;
@@ -90,20 +90,6 @@ if (time==30)
 if (hp==0)
 {
     room_goto(Gameover);
-}
-
-
-/*while(hp == 0)
-{
-    if(time &lt; 60)
-    {
-        time += 1;
-    }
-    if(time = 60)
-    {
-        hp -= 1;
-        time = 0;
-    }
 }
 </string>
           </argument>

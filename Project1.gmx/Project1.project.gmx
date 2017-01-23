@@ -14,6 +14,7 @@
     <sprite>sprites\orb_health</sprite>
     <sprite>sprites\orb_score</sprite>
     <sprite>sprites\menuarrow</sprite>
+    <sprite>sprites\enemy</sprite>
   </sprites>
   <backgrounds name="background">
     <background>background\GameBackground</background>
@@ -30,14 +31,16 @@
   </fonts>
   <objects name="objects">
     <object>objects\block_floor</object>
-    <object>objects\text_score</object>
     <object>objects\obj_char</object>
     <object>objects\obj_orb_score</object>
     <object>objects\obj_orb_health</object>
-    <object>objects\obj_health</object>
     <object>objects\obj_orbspawn</object>
+    <object>objects\obj_enemy</object>
+    <object>objects\obj_enemyspawn</object>
     <object>objects\obj_menu</object>
     <object>objects\obj_gameover</object>
+    <object>objects\obj_health</object>
+    <object>objects\text_score</object>
     <object>objects\snd_StageBGM</object>
     <object>objects\snd_Gameover</object>
   </objects>

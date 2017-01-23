@@ -8,31 +8,6 @@
   <parentName>&lt;undefined&gt;</parentName>
   <maskName>&lt;undefined&gt;</maskName>
   <events>
-    <event eventtype="0" enumb="0">
-      <action>
-        <libid>1</libid>
-        <id>603</id>
-        <kind>7</kind>
-        <userelative>0</userelative>
-        <isquestion>0</isquestion>
-        <useapplyto>-1</useapplyto>
-        <exetype>2</exetype>
-        <functionname></functionname>
-        <codestring></codestring>
-        <whoName>self</whoName>
-        <relative>0</relative>
-        <isnot>0</isnot>
-        <arguments>
-          <argument>
-            <kind>1</kind>
-            <string>///initialzie variable
-
-stack = 0;
-</string>
-          </argument>
-        </arguments>
-      </action>
-    </event>
     <event eventtype="3" enumb="0">
       <action>
         <libid>1</libid>
@@ -50,23 +25,9 @@ stack = 0;
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>///Spawn Orbs
-
-if (obj_char.mode == 0)
+            <string>if(!instance_exists(obj_enemy))
 {
-    if(random(100)&lt;=2)
-    {
-        instance_create(1312,random(room_height),obj_orb_score);
-    }
-    
-    
-    if (obj_health.time == 29) stack +=1;
-    
-    if (stack == 15)
-    {
-        instance_create(1312,random(room_height),obj_orb_health);
-        stack = 0;
-    }
+    instance_create(1312,random(room_height),obj_enemy);
 }
 </string>
           </argument>
