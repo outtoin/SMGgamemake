@@ -127,10 +127,12 @@ if (hp==0)
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>/// draw hp bar
+            <string>///Draw
+// draw hp bar
 
 draw_set_color(c_black);
 draw_text(360,24,hp);
+//Check Time
 //draw_text(360,60,time);
 
 draw_set_color(c_black);
@@ -141,6 +143,14 @@ draw_rectangle(16,16,336,32,0);
 
 draw_set_color(c_lime);
 draw_rectangle(16,16,16+320*hp/100,32,0);
+
+//Check State
+draw_set_color(c_black);
+draw_text(360,60,"Mode : ");
+draw_text(430,60,obj_char.mode);
+draw_text(395,92,obj_char.key_jump);
+draw_text(430,92,obj_char.key_change);
+draw_text(360,92,obj_char.jump);
 </string>
           </argument>
         </arguments>

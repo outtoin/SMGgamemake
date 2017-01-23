@@ -156,6 +156,8 @@
     <instance objName="block_floor" x="416" y="704" name="inst_563DCAC6" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_char" x="128" y="656" name="inst_A0092305" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_health" x="1312" y="96" name="inst_F3C8B701" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="block_floor" x="896" y="-32" name="inst_FC61A01C" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="block_floor" x="864" y="-32" name="inst_C4736A7F" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
   </instances>
   <tiles/>
   <PhysicsWorld>0</PhysicsWorld>

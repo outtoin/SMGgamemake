@@ -19,7 +19,9 @@
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>if (hp &gt; 0)
+            <string>///Not Using This
+
+if (hp &gt; 0)
 {
     hp -= 1;
 }
