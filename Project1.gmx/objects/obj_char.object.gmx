@@ -62,7 +62,7 @@ key_right = keyboard_check(vk_right);
 key_left = -keyboard_check(vk_left);
 key_up = -keyboard_check(vk_up);
 key_down = keyboard_check(vk_down);
-key_jump = keyboard_check_pressed(ord("Z"));
+key_act = keyboard_check_pressed(ord("Z"));
 key_change = keyboard_check_pressed(ord("X"));
 
 //Change Mode
@@ -122,7 +122,7 @@ if (mode == 0)
         jump = jump_max ;
     }
     
-    if (key_jump) &amp;&amp; (jump&gt;0)
+    if (key_act) &amp;&amp; (jump&gt;0)
     {
         jump -= 1;
         vsp = -jumpspeed;
@@ -158,6 +158,11 @@ if (mode == 1)
 {
     move = key_up + key_down;
     vsp = move * movespeed;
+    
+    if(key_act)    
+    {
+        sprite_index = char_atk_motion;
+    }
     
     if (place_meeting(x,y+vsp,block_floor))
     {
