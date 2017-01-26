@@ -34,6 +34,7 @@ movespeed = 8;
 jump = 0;
 jump_max = 2;
 mode = 0;
+img_spd = 0.1;
 </string>
           </argument>
         </arguments>
@@ -124,6 +125,7 @@ if (mode == 0)
     
     if (key_act) &amp;&amp; (jump&gt;0)
     {
+
         jump -= 1;
         vsp = -jumpspeed;
     }
@@ -159,9 +161,14 @@ if (mode == 1)
     move = key_up + key_down;
     vsp = move * movespeed;
     
-    if(key_act)    
+    if (image_speed &gt; 0) {
+        if (image_index &gt; image_number - 1) sprite_index = char_atk;
+    }
+    
+    if(key_act &amp;&amp; sprite_index != char_atk_motion)    
     {
         sprite_index = char_atk_motion;
+        image_speed = img_spd;
     }
     
     if (place_meeting(x,y+vsp,block_floor))
