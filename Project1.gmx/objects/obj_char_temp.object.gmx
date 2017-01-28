@@ -170,7 +170,7 @@ if (mode == 1)
         sprite_index = char_atk_motion;
         image_speed = img_spd;
         
-        // Hitbox
+        /*// Hitbox
         if (image_index &gt;= 1) &amp;&amp; (image_index &lt;= 3)
         {
             with (instance_create(x, y, obj_hitbox))
@@ -187,9 +187,28 @@ if (mode == 1)
                     }
                 }
             }
+        }*/
+    }
+
+    // Hitbox
+    if (image_index &gt;= 1) &amp;&amp; (image_index &lt;= 3)
+    {
+        with (instance_create(x, y, obj_hitbox))
+        {
+            image_xscale = other.image_xscale;
+            with (instance_place(x, y, obj_enemy_temp))
+            {
+                if (hit = 0)
+                {
+                    hit = 1;
+                    vsp = -3;
+                    hsp = sign(x - other.x) * 4;
+                    image_xscale = sign(hsp);
+                }
+            }
         }
     }
-    
+        
     if (place_meeting(x,y+vsp,block_floor))
     {
         while(!place_meeting(x,y+sign(vsp),block_floor))
