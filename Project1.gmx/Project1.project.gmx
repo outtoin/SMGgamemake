@@ -26,6 +26,7 @@
   <paths name="paths"/>
   <scripts name="scripts">
     <script>scripts\scr_menu.gml</script>
+    <script>scripts\Approach.gml</script>
   </scripts>
   <fonts name="fonts">
     <font>fonts\ArcadeClassic</font>
@@ -46,6 +47,11 @@
     <object>objects\text_score</object>
     <object>objects\snd_StageBGM</object>
     <object>objects\snd_Gameover</object>
+    <objects name="temp">
+      <object>objects\obj_health_temp</object>
+      <object>objects\obj_char_temp</object>
+      <object>objects\obj_enemy_temp</object>
+    </objects>
   </objects>
   <timelines name="timelines">
     <timeline>timelines\obj_health_basic_decrease</timeline>
@@ -53,6 +59,7 @@
   <rooms name="rooms">
     <room>rooms\Mainmenu</room>
     <room>rooms\InGame</room>
+    <room>rooms\room5</room>
     <room>rooms\Options</room>
     <room>rooms\Gameover</room>
   </rooms>

@@ -15,5 +15,10 @@ switch (menu_pos)
         game_end();
         break;
     }
+    case 3:
+    {
+        room_goto(room5);
+        break;
+    }
     default: break;
 }
