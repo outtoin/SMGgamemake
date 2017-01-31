@@ -89,7 +89,7 @@ x += orb_spd;
             <string>if(obj_char.mode == 0)
 {
     instance_destroy();
-    score = score + 10 ;
+    score = score + 10 * obj_gage.magnify_scr ;
 }
 </string>
           </argument>

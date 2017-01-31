@@ -44,6 +44,7 @@
     <object>objects\obj_menu</object>
     <object>objects\obj_gameover</object>
     <object>objects\obj_health</object>
+    <object>objects\obj_gage</object>
     <object>objects\text_score</object>
     <object>objects\snd_StageBGM</object>
     <object>objects\snd_Gameover</object>
