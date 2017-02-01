@@ -27,7 +27,6 @@
             <kind>1</kind>
             <string>/// set initial variable
 
-hp = 100;
 time = 0;
 </string>
           </argument>
@@ -84,10 +83,10 @@ time = 0;
 if (time==30)
 {
         time = 0;
-        hp -= 1;
+        obj_char.hp -= 1;
 }
 
-if (hp==0)
+if (obj_char.hp==0)
 {
     room_goto(Gameover);
 }
@@ -117,7 +116,7 @@ if (hp==0)
 // draw hp bar
 
 draw_set_color(c_black);
-draw_text(360,24,hp);
+draw_text(360,24,obj_char.hp);
 //Check Time
 //draw_text(360,60,time);
 
@@ -128,7 +127,7 @@ draw_set_color(c_maroon);
 draw_rectangle(16,16,336,32,0);
 
 draw_set_color(c_lime);
-draw_rectangle(16,16,16+320*hp/100,32,0);
+draw_rectangle(16,16,16+320*obj_char.hp/100,32,0);
 
 //Check State
 draw_set_color(c_black);

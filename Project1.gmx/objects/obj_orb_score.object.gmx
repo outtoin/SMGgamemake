@@ -27,7 +27,7 @@
             <kind>1</kind>
             <string>orb_spd = 0;
 
-while (y&gt;672 || y&lt;160)
+while (y&gt;656 || y&lt;160)
 {
     y = random(room_height);
 }
