@@ -17,6 +17,7 @@
     <sprite>sprites\enemy</sprite>
     <sprite>sprites\char_atk_motion</sprite>
     <sprite>sprites\char_atk_hitbox</sprite>
+    <sprite>sprites\enemy_bullet_1</sprite>
   </sprites>
   <backgrounds name="background">
     <background>background\GameBackground</background>
@@ -53,6 +54,11 @@
       <object>objects\obj_char_temp</object>
       <object>objects\obj_enemy_temp</object>
     </objects>
+    <objects name="Bullet Testing">
+      <object>objects\obj_health_bullet_test</object>
+      <object>objects\obj_enemy_bullet1</object>
+      <object>objects\blt_1_test</object>
+    </objects>
   </objects>
   <timelines name="timelines">
     <timeline>timelines\obj_health_basic_decrease</timeline>
@@ -63,6 +69,7 @@
     <room>rooms\room5</room>
     <room>rooms\Options</room>
     <room>rooms\Gameover</room>
+    <room>rooms\Work_Bullet_SSH</room>
   </rooms>
   <help>
     <rtf>help.rtf</rtf>

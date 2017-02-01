@@ -29,6 +29,7 @@
 menu[1] = "Options";
 menu[2] = "Exit";
 menu[3] = "temp";
+menu[4] = "Work_Bullet_SSH";
 
 space = 64;
 menu_pos = 0;
