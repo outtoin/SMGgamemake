@@ -74,7 +74,7 @@ if (key_change)
         sprite_index = char_atk;
         mode = 1;
         vsp = 0;
-        x = 750;
+        x = 770;
         y = 656;
     }
     else
@@ -177,7 +177,7 @@ if (mode == 1)
         with (instance_create(x, y, obj_hitbox))
         {
             image_xscale = other.image_xscale;
-            with (instance_place(x, y, obj_enemy_temp))
+            with (instance_place(x, y, par_enemy))
             {
                 if (hit = 0)
                 {

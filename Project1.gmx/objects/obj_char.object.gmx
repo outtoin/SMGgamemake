@@ -177,7 +177,7 @@ if (mode == 1)
         with (instance_create(x, y, obj_hitbox))
         {
             image_xscale = other.image_xscale;
-            with (instance_place(x, y, obj_enemy_temp))
+            with (instance_place(x, y, par_enemy))
             {
                 if (hit = 0)
                 {

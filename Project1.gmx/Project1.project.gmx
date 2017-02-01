@@ -14,7 +14,8 @@
     <sprite>sprites\orb_health</sprite>
     <sprite>sprites\orb_score</sprite>
     <sprite>sprites\menuarrow</sprite>
-    <sprite>sprites\enemy</sprite>
+    <sprite>sprites\spr_enemy</sprite>
+    <sprite>sprites\spr_enemy_tmp</sprite>
     <sprite>sprites\char_atk_motion</sprite>
     <sprite>sprites\char_atk_hitbox</sprite>
   </sprites>
@@ -27,6 +28,8 @@
   <scripts name="scripts">
     <script>scripts\scr_menu.gml</script>
     <script>scripts\Approach.gml</script>
+    <script>scripts\random_exc.gml</script>
+    <script>scripts\inRange.gml</script>
   </scripts>
   <fonts name="fonts">
     <font>fonts\ArcadeClassic</font>
@@ -38,12 +41,6 @@
     <object>objects\obj_hitbox</object>
     <object>objects\obj_orb_score</object>
     <object>objects\obj_orb_health</object>
-    <object>objects\obj_orbspawn</object>
-    <object>objects\obj_enemy</object>
-    <object>objects\obj_enemyspawn</object>
-    <object>objects\obj_menu</object>
-    <object>objects\obj_gameover</object>
-    <object>objects\obj_health</object>
     <object>objects\obj_gage</object>
     <object>objects\text_score</object>
     <object>objects\snd_StageBGM</object>
@@ -51,7 +48,19 @@
     <objects name="temp">
       <object>objects\obj_health_temp</object>
       <object>objects\obj_char_temp</object>
-      <object>objects\obj_enemy_temp</object>
+      <object>objects\obj_enemy1_temp</object>
+    </objects>
+    <objects name="enemy">
+      <object>objects\par_enemy</object>
+      <object>objects\obj_enemy1</object>
+      <object>objects\obj_enemy2</object>
+    </objects>
+    <objects name="system">
+      <object>objects\obj_enemyspawn</object>
+      <object>objects\obj_menu</object>
+      <object>objects\obj_health</object>
+      <object>objects\obj_gameover</object>
+      <object>objects\obj_orbspawn</object>
     </objects>
   </objects>
   <timelines name="timelines">

@@ -28,6 +28,9 @@
             <string>///initialize variable
 
 time = 0;
+spawn_time = 0;
+
+enemylst = ds_list_create();
 </string>
           </argument>
         </arguments>
@@ -51,10 +54,13 @@ time = 0;
           <argument>
             <kind>1</kind>
             <string>time += 1;
+spawn_time += 1;
 
-if(!instance_exists(obj_enemy) &amp;&amp; obj_char.mode == 0 &amp;&amp; time &gt; 300)
+if(ds_list_size(enemylst) &lt;= 5 &amp;&amp; obj_char.mode == 0 &amp;&amp; time &gt; 300 &amp;&amp; spawn_time &gt; random_range(0,10))
 {
-    instance_create(1312,random(room_height),obj_enemy);
+    //instance_create(1312,random_range(0, 656),obj_enemy1);
+    number++;
+    spawn_time = 0;
 }
 </string>
           </argument>
