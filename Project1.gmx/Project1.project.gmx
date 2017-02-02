@@ -19,6 +19,7 @@
     <sprite>sprites\char_atk_motion</sprite>
     <sprite>sprites\char_atk_hitbox</sprite>
     <sprite>sprites\enemy_bullet_1</sprite>
+    <sprite>sprites\spr_enemy_afterimage</sprite>
   </sprites>
   <backgrounds name="background">
     <background>background\GameBackground</background>
@@ -62,6 +63,7 @@
       <object>objects\obj_health</object>
       <object>objects\obj_gameover</object>
       <object>objects\obj_orbspawn</object>
+      <object>objects\obj_enemy_afterimage</object>
     </objects>
     <objects name="Bullet Testing">
       <object>objects\obj_health_bullet_test</object>

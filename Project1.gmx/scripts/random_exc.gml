@@ -4,9 +4,9 @@
 
 var result = 0;
 var num;
-while (result == 1) {
+while (true) {
     num = random_range(argument0, argument1)
-    if (inRange(num, argument2, argument3)) result = 1;
+    if (inRange(num, argument2, argument3)) break;
 }
 
 return num;
