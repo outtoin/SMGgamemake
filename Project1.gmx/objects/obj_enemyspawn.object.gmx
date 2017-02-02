@@ -29,6 +29,7 @@
 
 time = 0;
 spawn_time = 0;
+number = 0;
 
 enemylst = ds_list_create();
 </string>
