@@ -22,7 +22,7 @@ switch (menu_pos)
     }
     case 4:
     {
-        room_goto(Work_Bullet_SSH);
+        room_goto(Work_SSH);
     }
     default: break;
 }

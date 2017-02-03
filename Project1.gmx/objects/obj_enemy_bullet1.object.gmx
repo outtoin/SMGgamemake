@@ -60,13 +60,16 @@ if(x &gt; 935)
 {
     x -= 6;
 }
-*/
+
+
+//bullet 1
 if(obj_char.mode == 0) time += 1;
 if(time == 45)
 {
     time = 0;
     instance_create(x,y,blt_1_test);
 }
+*/
 </string>
           </argument>
         </arguments>
