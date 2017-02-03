@@ -21,7 +21,11 @@
     <sprite>sprites\char_atk_hitbox</sprite>
     <sprite>sprites\enemy_bullet_1</sprite>
     <sprite>sprites\spr_enemy_afterimage</sprite>
+<<<<<<< HEAD
     <sprite>sprites\spr_atk_bomb</sprite>
+=======
+    <sprite>sprites\spr_missiles</sprite>
+>>>>>>> 2e38067caae0673761aa19b4e2a8b3fedf6ce299
   </sprites>
   <backgrounds name="background">
     <background>background\GameBackground</background>
@@ -76,6 +80,7 @@
       <object>objects\blt_1_test</object>
       <object>objects\obj_bomb_counter</object>
     </objects>
+    <object>objects\obj_missiles</object>
   </objects>
   <timelines name="timelines">
     <timeline>timelines\obj_health_basic_decrease</timeline>
