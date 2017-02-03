@@ -139,8 +139,8 @@ draw_rectangle(16,16,16+320*obj_char.hp/100,32,0);
 //draw_text(360,92,"Score x");
 //draw_text(460,92,obj_gage.magnify_scr);
 //draw_text(300,92,obj_gage.time);
-draw_text(395,92,obj_char.xpos);
-draw_text(430,92,obj_char.ypos);
+draw_text(395,92,obj_char.bomb);
+draw_text(430,92,obj_char.bomb_stack);
 </string>
           </argument>
         </arguments>

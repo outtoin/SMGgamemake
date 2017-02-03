@@ -38,6 +38,8 @@ img_spd = 0.1;
 hp = 100;
 xpos = 0;
 ypos = 0;
+bomb = 2;
+bomb_stack = 0;
 </string>
           </argument>
         </arguments>
@@ -203,6 +205,18 @@ if (mode == 1)
         vsp = 0;
     }
     y += vsp;
+}
+
+
+if (bomb_stack == 8)
+{
+    bomb +=1;
+    bomb_stack=0;
+}
+if (bomb == 5)
+{
+    bomb = 5;
+    bomb_stack = 0;
 }
 </string>
           </argument>
