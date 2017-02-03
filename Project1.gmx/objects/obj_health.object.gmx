@@ -4,7 +4,7 @@
   <solid>0</solid>
   <visible>-1</visible>
   <depth>0</depth>
-  <persistent>0</persistent>
+  <persistent>-1</persistent>
   <parentName>&lt;undefined&gt;</parentName>
   <maskName>&lt;undefined&gt;</maskName>
   <events>
@@ -86,6 +86,11 @@ if (time==30)
         obj_char.hp -= 1;
 }
 
+if (obj_char.hp == 80)
+{
+    room_goto(rm_inn);
+}
+
 if (obj_char.hp==0)
 {
     room_goto(Gameover);
@@ -115,30 +120,35 @@ if (obj_char.hp==0)
             <string>///Draw
 // draw hp bar
 
-draw_set_color(c_black);
-draw_text(360,24,obj_char.hp);
-//Check Time
-//draw_text(360,60,time);
+if (room == InGame)
+{
 
-draw_set_color(c_black);
-draw_rectangle(12,12,340,36,0);
+    draw_set_color(c_black);
+    draw_text(360,24,obj_char.hp);
+    //Check Time
+    //draw_text(360,60,time);
+    
+    draw_set_color(c_black);
+    draw_rectangle(12,12,340,36,0);
+    
+    draw_set_color(c_maroon);
+    draw_rectangle(16,16,336,32,0);
+    
+    draw_set_color(c_lime);
+    draw_rectangle(16,16,16+320*obj_char.hp/100,32,0);
+    
+    //Check State
+    draw_set_color(c_black);
+    draw_text(360,60,"Mode : ");
+    draw_text(430,60,obj_char.mode);
+    //draw_text(395,92,obj_char.key_act);
+    //draw_text(430,92,obj_char.key_change);
+    //draw_text(360,92,obj_char.jump);
+    draw_text(360,92,"Score x");
+    draw_text(460,92,obj_gage.magnify_scr);
+    draw_text(300,92,obj_gage.time);
 
-draw_set_color(c_maroon);
-draw_rectangle(16,16,336,32,0);
-
-draw_set_color(c_lime);
-draw_rectangle(16,16,16+320*obj_char.hp/100,32,0);
-
-//Check State
-draw_set_color(c_black);
-draw_text(360,60,"Mode : ");
-draw_text(430,60,obj_char.mode);
-//draw_text(395,92,obj_char.key_act);
-//draw_text(430,92,obj_char.key_change);
-//draw_text(360,92,obj_char.jump);
-draw_text(360,92,"Score x");
-draw_text(460,92,obj_gage.magnify_scr);
-draw_text(300,92,obj_gage.time);
+}
 </string>
           </argument>
         </arguments>

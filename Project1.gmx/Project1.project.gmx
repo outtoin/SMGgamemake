@@ -22,11 +22,13 @@
     <sprite>sprites\enemy_bullet_1</sprite>
     <sprite>sprites\spr_enemy_afterimage</sprite>
     <sprite>sprites\spr_missiles</sprite>
+    <sprite>sprites\spr_exit</sprite>
   </sprites>
   <backgrounds name="background">
     <background>background\GameBackground</background>
     <background>background\Main</background>
     <background>background\GamoverBackground</background>
+    <background>background\bgr_inn</background>
   </backgrounds>
   <paths name="paths"/>
   <scripts name="scripts">
@@ -75,6 +77,7 @@
       <object>objects\blt_1_test</object>
     </objects>
     <object>objects\obj_missiles</object>
+    <object>objects\obj_exit</object>
   </objects>
   <timelines name="timelines">
     <timeline>timelines\obj_health_basic_decrease</timeline>
@@ -86,6 +89,7 @@
     <room>rooms\Options</room>
     <room>rooms\Gameover</room>
     <room>rooms\Work_SSH</room>
+    <room>rooms\rm_inn</room>
   </rooms>
   <help>
     <rtf>help.rtf</rtf>

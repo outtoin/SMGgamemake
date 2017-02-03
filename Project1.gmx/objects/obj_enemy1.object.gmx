@@ -47,6 +47,7 @@ hsp_max = 3;
 vsp_max = 5;
 jbuff = 0;
 hit = 0;
+hp = 10;
 
 
 
@@ -88,8 +89,14 @@ if (hit != 0)
 {
     image_index = 1;
     hit = Approach(hit,0,0.05);
+    hp -= obj_char.atk;
+}
+
+if (hp == 0)
+{
     instance_destroy();
 }
+
 else image_index = 0;
 </string>
           </argument>

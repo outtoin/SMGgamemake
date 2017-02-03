@@ -4,7 +4,7 @@
   <solid>0</solid>
   <visible>-1</visible>
   <depth>0</depth>
-  <persistent>0</persistent>
+  <persistent>-1</persistent>
   <parentName>&lt;undefined&gt;</parentName>
   <maskName>&lt;undefined&gt;</maskName>
   <events>
@@ -38,6 +38,7 @@ img_spd = 0.1;
 hp = 100;
 xpos = 0;
 ypos = 0;
+atk = 9;
 </string>
           </argument>
         </arguments>
@@ -185,7 +186,7 @@ if (mode == 1)
             
             with (instance_place(x, y, par_enemy))
             {
-                if (hit = 0 &amp;&amp; obj_hitbox.isHit = 0)
+                if (hit = 0)
                 {
                     hit = 1;
                 }

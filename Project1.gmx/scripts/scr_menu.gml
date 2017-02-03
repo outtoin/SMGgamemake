@@ -7,7 +7,7 @@ switch (menu_pos)
     }
     case 1:
     {   
-        room_goto(Options);
+        room_goto(rm_inn);
         break;
     }
     case 2:
