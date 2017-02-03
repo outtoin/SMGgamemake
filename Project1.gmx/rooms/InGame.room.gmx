@@ -161,6 +161,7 @@
     <instance objName="snd_StageBGM" x="1312" y="128" name="inst_1748D1EB" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_enemyspawn" x="1312" y="160" name="inst_B1FF8F73" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_gage" x="1312" y="192" name="inst_9728F380" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_missiles" x="32" y="96" name="inst_B5F5BC15" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
   </instances>
   <tiles/>
   <PhysicsWorld>0</PhysicsWorld>
