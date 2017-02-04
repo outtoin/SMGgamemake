@@ -79,22 +79,16 @@ time = 0;
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>time += 1;
-if (time==30)
-{
-        time = 0;
-        obj_char.hp -= 1;
-}
+            <string>
 
+/*
 if (obj_char.hp == 80)
 {
     room_goto(rm_inn);
 }
+*/
 
-if (obj_char.hp==0)
-{
-    room_goto(Gameover);
-}
+
 </string>
           </argument>
         </arguments>
@@ -146,7 +140,7 @@ if (room == InGame)
     //draw_text(360,92,obj_char.jump);
     draw_text(360,92,"Score x");
     draw_text(460,92,obj_gage.magnify_scr);
-    draw_text(300,92,obj_gage.time);
+    //draw_text(300,92,obj_gage.time);
 
 }
 </string>

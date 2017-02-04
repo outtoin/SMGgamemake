@@ -28,6 +28,7 @@
             <string>///initialzie variable
 
 stack = 0;
+spawn_time = 0;
 </string>
           </argument>
         </arguments>
@@ -52,12 +53,12 @@ stack = 0;
             <kind>1</kind>
             <string>///Spawn Orbs
 
-if (obj_char.mode == 0)
+if(obj_char.mode == 0) spawn_time += 1;
+
+if (obj_char.mode == 0 &amp;&amp; spawn_time &gt; random_range(60,90))
 {
-    if(random(100)&lt;=2)
-    {
-        instance_create(1312,random(room_height),obj_orb_score);
-    }
+    instance_create(1312,random(room_height),obj_orb_score);
+    spawn_time = 0;
     
     
     if (obj_health.time == 29) stack +=1;

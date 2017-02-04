@@ -43,6 +43,7 @@
     <font>fonts\FFFforward</font>
   </fonts>
   <objects name="objects">
+    <object>objects\obj_bomb</object>
     <object>objects\block_floor</object>
     <object>objects\obj_char</object>
     <object>objects\obj_hitbox</object>
@@ -60,6 +61,7 @@
     <objects name="enemy">
       <object>objects\par_enemy</object>
       <object>objects\obj_enemy1</object>
+      <object>objects\obj_bullet1</object>
       <object>objects\obj_enemy2</object>
     </objects>
     <objects name="system">
@@ -69,15 +71,16 @@
       <object>objects\obj_gameover</object>
       <object>objects\obj_orbspawn</object>
       <object>objects\obj_enemy_afterimage</object>
+      <object>objects\obj_bombcounter</object>
     </objects>
     <objects name="Testing_ssh">
       <object>objects\obj_health_bullet_test</object>
-      <object>objects\obj_bomb</object>
       <object>objects\obj_orbspawn_test</object>
+      <object>objects\obj_bomb_counter_test</object>
+      <object>objects\obj_bomb_test</object>
       <object>objects\obj_enemy_bullet1</object>
       <object>objects\obj_enemy_hitcheck</object>
       <object>objects\blt_1_test</object>
-      <object>objects\obj_bomb_counter</object>
     </objects>
     <object>objects\obj_missiles</object>
     <object>objects\obj_exit</object>

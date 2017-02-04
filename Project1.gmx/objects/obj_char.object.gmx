@@ -38,9 +38,10 @@ img_spd = 0.1;
 hp = 100;
 xpos = 0;
 ypos = 0;
-atk = 9;
+atk = 10;
 bomb = 2;
 bomb_stack = 0;
+time = 0;
 </string>
           </argument>
         </arguments>
@@ -173,19 +174,20 @@ if (mode == 1)
         if (image_index &gt; image_number - 1) sprite_index = char_atk;
     }
     
-    if(key_act)    
+    if(key_act &amp;&amp; bomb&gt;0)
     {
         sprite_index = char_atk_motion;
         image_speed = img_spd;
+        bomb -=1;
     }
-    
+        
     // Hitbox
     if (image_index &gt;= 1) &amp;&amp; (image_index &lt;= 3)
     {
         with (instance_create(x, y, obj_hitbox))
         {
             image_xscale = other.image_xscale;
-            
+                
             with (instance_place(x, y, par_enemy))
             {
                 if (hit = 0)
@@ -196,6 +198,7 @@ if (mode == 1)
         }
     }
     
+
     //vertical collision
     if (place_meeting(x,y+vsp,block_floor))
     {
@@ -208,7 +211,7 @@ if (mode == 1)
     y += vsp;
 }
 
-
+//Bomb
 if (bomb_stack == 8)
 {
     bomb +=1;
@@ -218,6 +221,16 @@ if (bomb == 5)
 {
     bomb = 5;
     bomb_stack = 0;
+}
+//HP
+time += 1;
+if (time==30)
+{
+        time = 0;
+        hp -= 1;
+}
+if (hp==0){
+ room_goto(Gameover);
 }
 </string>
           </argument>
