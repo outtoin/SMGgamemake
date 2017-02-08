@@ -34,6 +34,8 @@ xpos = x;
 ypos = y;
 xchar = obj_char.x;
 ychar = obj_char.y;
+
+if(x == obj_enemy1.x) bullet_id = obj_enemy1.id;
 </string>
           </argument>
         </arguments>
@@ -70,6 +72,7 @@ if(obj_char.mode ==0 &amp;&amp; place_meeting(x,y,obj_char))
     instance_destroy();
 }
 
+if(obj_char.kill == bullet_id) instance_destroy();
 </string>
           </argument>
         </arguments>

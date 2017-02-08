@@ -42,12 +42,13 @@ atk = 10;
 bomb = 2;
 bomb_stack = 0;
 time = 0;
+kill = 0;
 </string>
           </argument>
         </arguments>
       </action>
     </event>
-    <event eventtype="3" enumb="0">
+    <event eventtype="3" enumb="1">
       <action>
         <libid>1</libid>
         <id>603</id>
@@ -93,13 +94,15 @@ if (key_change)
         vsp = 0;
         x = 128;
         y = 656;
-    }
-    
+    }   
 }
+
 </string>
           </argument>
         </arguments>
       </action>
+    </event>
+    <event eventtype="3" enumb="0">
       <action>
         <libid>1</libid>
         <id>603</id>
@@ -230,7 +233,8 @@ if (time==30)
         hp -= 1;
 }
 if (hp==0){
- room_goto(Gameover);
+    instance_destroy();
+    room_goto(Gameover);
 }
 </string>
           </argument>

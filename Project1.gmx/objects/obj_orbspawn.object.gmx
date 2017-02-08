@@ -59,15 +59,14 @@ if (obj_char.mode == 0 &amp;&amp; spawn_time &gt; random_range(60,90))
 {
     instance_create(1312,random(room_height),obj_orb_score);
     spawn_time = 0;
+}
+
+if (obj_char.mode == 0 &amp;&amp; obj_char.time == 29) stack +=1;
     
-    
-    if (obj_health.time == 29) stack +=1;
-    
-    if (stack == 15)
-    {
-        instance_create(1312,random(room_height),obj_orb_health);
-        stack = 0;
-    }
+if (stack == 15)
+{
+    instance_create(1312,random(room_height),obj_orb_health);
+    stack = 0;
 }
 </string>
           </argument>

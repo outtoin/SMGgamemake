@@ -141,6 +141,7 @@ draw_rectangle(16,16,16+320*obj_char.hp/100,32,0);
 //draw_text(300,92,obj_gage.time);
 draw_text(395,92,obj_char.bomb);
 draw_text(430,92,obj_char.bomb_stack);
+draw_text(obj_enemy_bullet1.x,obj_enemy_bullet1.y,obj_enemy_bullet1.id);
 </string>
           </argument>
         </arguments>

@@ -51,7 +51,6 @@ hp = 10;
 time = 0;
 gap = random_range(60,90);
 
-
 </string>
           </argument>
         </arguments>
@@ -95,6 +94,7 @@ if (hit != 0)
 if (hp == 0)
 {
     instance_destroy();
+    obj_char.kill = id;
 }
 
 else image_index = 0;
@@ -106,6 +106,8 @@ if(time &gt; gap)
     time = 0;
     instance_create(x,y,obj_bullet1);
 }
+
+
 
 </string>
           </argument>

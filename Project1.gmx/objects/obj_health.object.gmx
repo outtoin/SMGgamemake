@@ -120,7 +120,8 @@ if (room == InGame)
     draw_set_color(c_black);
     draw_text(360,24,obj_char.hp);
     //Check Time
-    //draw_text(360,60,time);
+    draw_text(360,128,obj_char.time);
+    draw_text(392,128,obj_orbspawn.stack);
     
     draw_set_color(c_black);
     draw_rectangle(12,12,340,36,0);

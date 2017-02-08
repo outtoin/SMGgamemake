@@ -156,9 +156,7 @@
     <instance objName="block_floor" x="-32" y="64" name="inst_D3D9A57D" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="block_floor" x="-32" y="32" name="inst_5C909EC8" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="block_floor" x="-32" y="0" name="inst_D56AC259" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="obj_gage" x="1344" y="672" name="inst_15E4CBB3" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_enemy_hitcheck" x="944" y="480" name="inst_727C7E05" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="obj_bomb_counter_test" x="1344" y="672" name="inst_0F4A3A6B" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_bomb_counter_test" x="1280" y="672" name="inst_3A3BBCA3" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
   </instances>
   <tiles/>
