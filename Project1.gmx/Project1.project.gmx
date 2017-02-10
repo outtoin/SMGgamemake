@@ -59,10 +59,10 @@
       <object>objects\obj_enemy1_temp</object>
     </objects>
     <objects name="enemy">
-      <object>objects\par_enemy</object>
-      <object>objects\obj_enemy1</object>
       <object>objects\obj_bullet1</object>
+      <object>objects\par_enemy</object>
       <object>objects\obj_enemy2</object>
+      <object>objects\obj_enemy1</object>
     </objects>
     <objects name="system">
       <object>objects\obj_enemyspawn</object>
@@ -74,13 +74,11 @@
       <object>objects\obj_bombcounter</object>
     </objects>
     <objects name="Testing_ssh">
-      <object>objects\obj_health_bullet_test</object>
-      <object>objects\obj_orbspawn_test</object>
-      <object>objects\obj_bomb_counter_test</object>
-      <object>objects\obj_bomb_test</object>
-      <object>objects\obj_enemy_bullet1</object>
-      <object>objects\obj_enemy_hitcheck</object>
-      <object>objects\blt_1_test</object>
+      <object>objects\obj_enemyspawn_test</object>
+      <object>objects\obj_enemy_afterimage_test</object>
+      <object>objects\obj_enemy_test</object>
+      <object>objects\obj_char_test</object>
+      <object>objects\obj_bullet1_test</object>
     </objects>
     <object>objects\obj_missiles</object>
     <object>objects\obj_exit</object>
@@ -91,10 +89,10 @@
   <rooms name="rooms">
     <room>rooms\Mainmenu</room>
     <room>rooms\InGame</room>
+    <room>rooms\Work_SSH</room>
     <room>rooms\room5</room>
     <room>rooms\Options</room>
     <room>rooms\Gameover</room>
-    <room>rooms\Work_SSH</room>
     <room>rooms\rm_inn</room>
   </rooms>
   <help>
