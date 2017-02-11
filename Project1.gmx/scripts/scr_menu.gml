@@ -2,7 +2,7 @@ switch (menu_pos)
 {
     case 0:
     {
-        room_goto(InGame);
+        room_goto(rm_mainmenu);
         break;
     }
     case 1:

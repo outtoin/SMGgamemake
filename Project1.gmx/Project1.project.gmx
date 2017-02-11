@@ -82,13 +82,13 @@
     </objects>
     <object>objects\obj_missiles</object>
     <object>objects\obj_exit</object>
+    <object>objects\obj_startswitch</object>
   </objects>
-  <timelines name="timelines">
-    <timeline>timelines\obj_health_basic_decrease</timeline>
-  </timelines>
+  <timelines name="timelines"/>
   <rooms name="rooms">
-    <room>rooms\Mainmenu</room>
-    <room>rooms\InGame</room>
+    <room>rooms\rm_Start</room>
+    <room>rooms\rm_mainmenu</room>
+    <room>rooms\rm_ingame</room>
     <room>rooms\Work_SSH</room>
     <room>rooms\room5</room>
     <room>rooms\Options</room>

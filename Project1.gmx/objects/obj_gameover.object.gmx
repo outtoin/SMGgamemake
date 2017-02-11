@@ -53,12 +53,12 @@ y = 300;
             <string>//room move
 if (keyboard_check_released(ord("R")) == 1)
 {
-    room_goto(InGame);
+    room_goto(rm_ingame);
 }
 
 if (keyboard_check_released(vk_space) == 1)
 {
-    room_goto(Mainmenu);
+    room_goto(rm_mainmenu);
 }
 </string>
           </argument>
