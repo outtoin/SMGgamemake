@@ -66,6 +66,7 @@
     </objects>
     <objects name="system">
       <object>objects\obj_enemyspawn</object>
+      <object>objects\obj_startswitch</object>
       <object>objects\obj_menu</object>
       <object>objects\obj_health</object>
       <object>objects\obj_gameover</object>
@@ -82,9 +83,7 @@
     </objects>
     <object>objects\obj_missiles</object>
     <object>objects\obj_exit</object>
-    <object>objects\obj_startswitch</object>
   </objects>
-  <timelines name="timelines"/>
   <rooms name="rooms">
     <room>rooms\rm_Start</room>
     <room>rooms\rm_mainmenu</room>

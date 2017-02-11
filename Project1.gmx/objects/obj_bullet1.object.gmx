@@ -5,7 +5,7 @@
   <visible>-1</visible>
   <depth>0</depth>
   <persistent>0</persistent>
-  <parentName>&lt;undefined&gt;</parentName>
+  <parentName>self</parentName>
   <maskName>&lt;undefined&gt;</maskName>
   <events>
     <event eventtype="0" enumb="0">
@@ -72,7 +72,10 @@ if(obj_char.mode ==0 &amp;&amp; place_meeting(x,y,obj_char))
     instance_destroy();
 }
 
-if(obj_char.kill == bullet_id) instance_destroy();
+if(obj_char.kill == ypos)
+{
+    instance_destroy();
+}
 </string>
           </argument>
         </arguments>

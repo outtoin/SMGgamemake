@@ -50,6 +50,8 @@ hit = 0;
 hp = 10;
 time = 0;
 gap = random_range(60,90);
+ypos = y;
+obj_char.kill = 0;
 
 </string>
           </argument>
@@ -94,7 +96,7 @@ if (hit != 0)
 if (hp == 0)
 {
     instance_destroy();
-    obj_char.kill = id;
+    obj_char.kill = ypos;
 }
 
 else image_index = 0;
