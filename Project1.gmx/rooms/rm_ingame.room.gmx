@@ -162,6 +162,7 @@
     <instance objName="obj_enemyspawn" x="1312" y="160" name="inst_B1FF8F73" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_gage" x="1312" y="192" name="inst_9728F380" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_bombcounter" x="1312" y="224" name="inst_8DF50D3A" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="save" x="1312" y="256" name="inst_B4338281" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
   </instances>
   <tiles/>
   <PhysicsWorld>0</PhysicsWorld>
