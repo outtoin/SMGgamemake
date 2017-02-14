@@ -25,6 +25,7 @@
     <sprite>sprites\spr_missiles</sprite>
     <sprite>sprites\spr_exit</sprite>
     <sprite>sprites\spr_tutend</sprite>
+    <sprite>sprites\spr_start</sprite>
   </sprites>
   <backgrounds name="background">
     <background>background\GameBackground</background>
@@ -40,6 +41,7 @@
     <script>scripts\Approach.gml</script>
     <script>scripts\random_exc.gml</script>
     <script>scripts\inRange.gml</script>
+    <script>scripts\scr_loadmoney.gml</script>
   </scripts>
   <fonts name="fonts">
     <font>fonts\ArcadeClassic</font>
@@ -89,6 +91,7 @@
     <objects name="mainmenu">
       <object>objects\obj_startswitch</object>
       <object>objects\obj_highscore</object>
+      <object>objects\obj_status</object>
     </objects>
     <object>objects\obj_missiles</object>
     <object>objects\obj_exit</object>
@@ -100,7 +103,6 @@
     <room>rooms\rm_option</room>
     <room>rooms\rm_inn</room>
     <room>rooms\rm_tutorial</room>
-    <room>rooms\rm_lab</room>
     <room>rooms\rm_gameover</room>
     <room>rooms\Work_SSH</room>
     <room>rooms\room5</room>

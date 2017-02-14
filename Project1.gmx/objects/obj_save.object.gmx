@@ -27,8 +27,12 @@
             <kind>1</kind>
             <string>//if (fil_exists("save.ini")) file_delete("save.ini");
 ini_open("save.ini");
-var highscore = ini_read_real("score","current",0)
-if (score&gt;highscore) ini_write_real("score","current",score);
+var highscore = ini_read_real("status","highscore",0);
+if (score&gt;highscore) ini_write_real("status","highscore",score);
+
+var money = ini_read_real("status","money",0);
+money += score;
+ini_write_real("status","money",money);
 ini_close();
 </string>
           </argument>

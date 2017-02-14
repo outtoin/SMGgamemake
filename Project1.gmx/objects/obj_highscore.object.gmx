@@ -48,7 +48,7 @@
           <argument>
             <kind>1</kind>
             <string>ini_open("save.ini");
-var highscore = ini_read_real("score","current",0);
+var highscore = ini_read_real("status","highscore",0);
 ini_close();
 
 draw_set_color(c_black);
