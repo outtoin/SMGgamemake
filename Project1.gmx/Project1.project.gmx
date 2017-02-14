@@ -24,16 +24,19 @@
     <sprite>sprites\spr_atk_bomb</sprite>
     <sprite>sprites\spr_missiles</sprite>
     <sprite>sprites\spr_exit</sprite>
+    <sprite>sprites\spr_tutend</sprite>
   </sprites>
   <backgrounds name="background">
     <background>background\GameBackground</background>
     <background>background\Main</background>
     <background>background\GamoverBackground</background>
     <background>background\bgr_inn</background>
+    <background>background\bgr_tutorial</background>
   </backgrounds>
   <paths name="paths"/>
   <scripts name="scripts">
     <script>scripts\scr_menu.gml</script>
+    <script>scripts\scr_option.gml</script>
     <script>scripts\Approach.gml</script>
     <script>scripts\random_exc.gml</script>
     <script>scripts\inRange.gml</script>
@@ -65,13 +68,16 @@
       <object>objects\obj_enemy1</object>
     </objects>
     <objects name="system">
+      <object>objects\obj_save</object>
       <object>objects\obj_enemyspawn</object>
       <object>objects\obj_menu</object>
+      <object>objects\obj_menu_option</object>
       <object>objects\obj_health</object>
       <object>objects\obj_gameover</object>
       <object>objects\obj_orbspawn</object>
       <object>objects\obj_enemy_afterimage</object>
       <object>objects\obj_bombcounter</object>
+      <object>objects\obj_tutorial_end</object>
     </objects>
     <objects name="Testing_ssh">
       <object>objects\obj_enemyspawn_test</object>
@@ -80,23 +86,24 @@
       <object>objects\obj_char_test</object>
       <object>objects\obj_bullet1_test</object>
     </objects>
-    <object>objects\obj_missiles</object>
-    <object>objects\obj_exit</object>
-    <object>objects\save</object>
     <objects name="mainmenu">
       <object>objects\obj_startswitch</object>
       <object>objects\obj_highscore</object>
     </objects>
+    <object>objects\obj_missiles</object>
+    <object>objects\obj_exit</object>
   </objects>
   <rooms name="rooms">
-    <room>rooms\rm_Start</room>
+    <room>rooms\rm_start</room>
     <room>rooms\rm_mainmenu</room>
     <room>rooms\rm_ingame</room>
+    <room>rooms\rm_option</room>
+    <room>rooms\rm_inn</room>
+    <room>rooms\rm_tutorial</room>
+    <room>rooms\rm_lab</room>
+    <room>rooms\rm_gameover</room>
     <room>rooms\Work_SSH</room>
     <room>rooms\room5</room>
-    <room>rooms\Options</room>
-    <room>rooms\Gameover</room>
-    <room>rooms\rm_inn</room>
   </rooms>
   <help>
     <rtf>help.rtf</rtf>

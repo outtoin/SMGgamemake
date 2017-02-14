@@ -1,13 +1,18 @@
+ini_open("save.ini");
+var tutorial = ini_read_real("system","tutorial",0);
+ini_close();
+
 switch (menu_pos)
 {
     case 0:
     {
-        room_goto(rm_mainmenu);
+        if (tutorial == 0) room_goto(rm_tutorial);
+        else room_goto(rm_mainmenu);
         break;
     }
     case 1:
     {   
-        room_goto(rm_inn);
+        room_goto(rm_option);
         break;
     }
     case 2:

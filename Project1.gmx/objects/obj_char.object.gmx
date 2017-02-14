@@ -234,7 +234,7 @@ if (time==30)
 }
 if (hp==0){
     instance_destroy();
-    room_goto(Gameover);
+    room_goto(rm_gameover);
 }
 </string>
           </argument>
