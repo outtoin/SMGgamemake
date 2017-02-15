@@ -86,11 +86,15 @@ x += orb_spd;
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>if(obj_char.mode == 0)
+            <string>ini_open("save.ini");
+var hp = ini_read_real("status","hp",50);
+ini_close();
+
+if(obj_char.mode == 0)
 {
     instance_destroy();
-    obj_char.hp = obj_char.hp + 10 ;
-    if (obj_char.hp &gt; 100) obj_char.hp = 100;
+    obj_char.hp = obj_char.hp + 100 ;
+    if (obj_char.hp &gt; hp) obj_char.hp = hp;
 }
 </string>
           </argument>

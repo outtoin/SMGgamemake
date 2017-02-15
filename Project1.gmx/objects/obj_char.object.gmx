@@ -26,6 +26,10 @@
           <argument>
             <kind>1</kind>
             <string>///Initialize Variables
+ini_open("save.ini");
+hp = ini_read_real("status","hp",50);;
+ini_close();
+
 grav = 1;
 hsp = 0;
 vsp = 0;
@@ -35,7 +39,7 @@ jump = 0;
 jump_max = 2;
 mode = 0;
 img_spd = 0.1;
-hp = 100;
+//hp = 100;
 xpos = 0;
 ypos = 0;
 atk = 10;
