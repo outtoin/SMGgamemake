@@ -6,6 +6,8 @@
   <NewExtensions/>
   <sounds name="sound">
     <sound>sound\BGM_Stage</sound>
+    <sound>sound\BGM_Inn</sound>
+    <sound>sound\BGM_mainmenu</sound>
   </sounds>
   <sprites name="sprites">
     <sprite>sprites\char_run</sprite>
@@ -57,6 +59,7 @@
     <object>objects\obj_orb_health</object>
     <object>objects\obj_gage</object>
     <object>objects\text_score</object>
+    <object>objects\snd_mainmenu</object>
     <object>objects\snd_StageBGM</object>
     <object>objects\snd_Gameover</object>
     <objects name="temp">
