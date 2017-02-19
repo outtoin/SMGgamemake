@@ -25,7 +25,7 @@
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>///Calibrate position
+            <string>///variables
 
 /*while (y&gt;672 || y&lt;160)
 {
@@ -49,7 +49,7 @@ jbuff = 0;
 hit = 0;
 hp = 10;
 time = 0;
-gap = random_range(60,90);
+gap = random_range(120,180);
 ypos = y;
 obj_char.kill = 0;
 
@@ -108,9 +108,6 @@ if(time &gt; gap)
     time = 0;
     instance_create(x,y,obj_bullet1);
 }
-
-
-
 </string>
           </argument>
         </arguments>

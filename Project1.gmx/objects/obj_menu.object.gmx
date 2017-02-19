@@ -65,7 +65,8 @@ if (move != 0)
 {
     menu_pos += move;
     if (menu_pos&lt;0) menu_pos = array_length_1d(menu) - 1;
-    if (menu_pos&gt; array_length_1d(menu) - 1) menu_pos = 0;  
+    if (menu_pos&gt; array_length_1d(menu) - 1) menu_pos = 0;
+    audio_play_sound(sfx_buttonmove,1,false);
 }
 
 var push;

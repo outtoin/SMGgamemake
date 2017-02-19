@@ -129,6 +129,7 @@ if (key_change)
 //Jump Mode
 if (mode == 0)
 {
+    if(!audio_is_playing(sfx_charwalk))audio_play_sound(sfx_charwalk,1,true);
     //React to inputs
     /*move = key_left + key_right;
     hsp = move * movespeed; */
@@ -141,7 +142,7 @@ if (mode == 0)
     
     if (key_act) &amp;&amp; (jump&gt;0)
     {
-
+        audio_stop_sound(sfx_charwalk);
         jump -= 1;
         vsp = -jumpspeed;
     }
@@ -174,6 +175,7 @@ if (mode == 0)
 //Attack Mode
 if (mode == 1)
 {
+    audio_stop_sound(sfx_charwalk);
     move = key_up + key_down;
     vsp = move * movespeed;
     

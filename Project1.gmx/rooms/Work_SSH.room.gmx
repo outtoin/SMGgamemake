@@ -132,7 +132,7 @@
     <instance objName="block_floor" x="448" y="704" name="inst_2FF2F830" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="block_floor" x="416" y="704" name="inst_563DCAC6" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_char_test" x="128" y="656" name="inst_E3FB1BEA" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="obj_enemyspawn_test" x="1280" y="640" name="inst_98C9ADC0" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_enemy_test" x="950" y="320" name="inst_BA4B0E41" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
   </instances>
   <tiles/>
   <PhysicsWorld>0</PhysicsWorld>

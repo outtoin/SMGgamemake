@@ -71,33 +71,9 @@ if(obj_char_test.mode ==0 &amp;&amp; place_meeting(x,y,obj_char_test))
     instance_destroy();
 }
 
-if(obj_char_test.kill == bullet_id) instance_destroy();
+//if(obj_char_test.kill == ypos) instance_destroy();
 
 
-</string>
-          </argument>
-        </arguments>
-      </action>
-    </event>
-    <event eventtype="8" enumb="0">
-      <action>
-        <libid>1</libid>
-        <id>603</id>
-        <kind>7</kind>
-        <userelative>0</userelative>
-        <isquestion>0</isquestion>
-        <useapplyto>-1</useapplyto>
-        <exetype>2</exetype>
-        <functionname></functionname>
-        <codestring></codestring>
-        <whoName>self</whoName>
-        <relative>0</relative>
-        <isnot>0</isnot>
-        <arguments>
-          <argument>
-            <kind>1</kind>
-            <string>draw_set_color(c_black);
-draw_text(x+16,y,bullet_id);
 </string>
           </argument>
         </arguments>

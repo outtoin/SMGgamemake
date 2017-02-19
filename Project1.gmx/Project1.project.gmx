@@ -8,6 +8,8 @@
     <sound>sound\BGM_Stage</sound>
     <sound>sound\BGM_Inn</sound>
     <sound>sound\BGM_mainmenu</sound>
+    <sound>sound\sfx_buttonmove</sound>
+    <sound>sound\sfx_charwalk</sound>
   </sounds>
   <sprites name="sprites">
     <sprite>sprites\char_run</sprite>
@@ -45,6 +47,7 @@
     <script>scripts\random_exc.gml</script>
     <script>scripts\inRange.gml</script>
     <script>scripts\scr_loadmoney.gml</script>
+    <script>scripts\scr_char_sfx.gml</script>
   </scripts>
   <fonts name="fonts">
     <font>fonts\ArcadeClassic</font>
@@ -70,8 +73,8 @@
     <objects name="enemy">
       <object>objects\obj_bullet1</object>
       <object>objects\par_enemy</object>
-      <object>objects\obj_enemy2</object>
       <object>objects\obj_enemy1</object>
+      <object>objects\obj_enemy2</object>
     </objects>
     <objects name="system">
       <object>objects\obj_save</object>
@@ -86,11 +89,10 @@
       <object>objects\obj_tutorial_end</object>
     </objects>
     <objects name="Testing_ssh">
-      <object>objects\obj_enemyspawn_test</object>
       <object>objects\obj_enemy_afterimage_test</object>
       <object>objects\obj_enemy_test</object>
-      <object>objects\obj_char_test</object>
       <object>objects\obj_bullet1_test</object>
+      <object>objects\obj_char_test</object>
     </objects>
     <objects name="mainmenu">
       <object>objects\obj_startswitch</object>
