@@ -27,7 +27,7 @@
             <kind>1</kind>
             <string>///Initialize Variables
 ini_open("save.ini");
-hp = ini_read_real("status","hp",50);;
+hp = ini_read_real("status","hp",50);
 ini_close();
 
 grav = 1;
@@ -129,7 +129,6 @@ if (key_change)
 //Jump Mode
 if (mode == 0)
 {
-    if(!audio_is_playing(sfx_charwalk))audio_play_sound(sfx_charwalk,1,true);
     //React to inputs
     /*move = key_left + key_right;
     hsp = move * movespeed; */
@@ -142,7 +141,8 @@ if (mode == 0)
     
     if (key_act) &amp;&amp; (jump&gt;0)
     {
-        audio_stop_sound(sfx_charwalk);
+        if(jump == 2) audio_play_sound(sfx_jump_1,1,false);
+        if(jump == 1) audio_play_sound(sfx_jump_2,1,false);
         jump -= 1;
         vsp = -jumpspeed;
     }
@@ -175,7 +175,6 @@ if (mode == 0)
 //Attack Mode
 if (mode == 1)
 {
-    audio_stop_sound(sfx_charwalk);
     move = key_up + key_down;
     vsp = move * movespeed;
     
@@ -185,6 +184,7 @@ if (mode == 1)
     
     if(key_act &amp;&amp; bomb&gt;0)
     {
+        audio_play_sound(sfx_atk_1,1,false);
         sprite_index = char_atk_motion;
         image_speed = img_spd;
         bomb -=1;

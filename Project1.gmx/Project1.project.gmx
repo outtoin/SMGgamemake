@@ -10,6 +10,11 @@
     <sound>sound\BGM_mainmenu</sound>
     <sound>sound\sfx_buttonmove</sound>
     <sound>sound\sfx_charwalk</sound>
+    <sound>sound\sfx_jump_1</sound>
+    <sound>sound\sfx_jump_2</sound>
+    <sound>sound\sfx_atk_1</sound>
+    <sound>sound\sfx_enemy_die</sound>
+    <sound>sound\sfx_coin_1</sound>
   </sounds>
   <sprites name="sprites">
     <sprite>sprites\char_run</sprite>
