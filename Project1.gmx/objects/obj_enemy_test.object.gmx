@@ -5,7 +5,7 @@
   <visible>-1</visible>
   <depth>0</depth>
   <persistent>0</persistent>
-  <parentName>par_enemy</parentName>
+  <parentName>self</parentName>
   <maskName>&lt;undefined&gt;</maskName>
   <events>
     <event eventtype="0" enumb="0">
@@ -49,7 +49,7 @@ jbuff = 0;
 hit = 0;
 hp = 10;
 time = 0;
-gap = 10;
+gap = 120;
 </string>
           </argument>
         </arguments>
@@ -99,14 +99,23 @@ if (hp == 0)
 else image_index = 0;
 
 //bullet 1
+/*
 if(obj_char_test.mode == 0) time += 1;
 if(time &gt; gap)
 {
     time = 0;
     instance_create(x,y,obj_bullet1_test);
 }
+*/
 
-
+//bullet 2 - lightning, If char don't eliminate these enemies, he'll get damage frequently which couldn't avoid.
+if(obj_char_test.mode == 0) time +=1;
+if(time &gt; gap)
+{
+    time = 0;
+    instance_create(128,600,obj_bullet2_test);
+    obj_char.hp -= 10;
+}
 
 </string>
           </argument>

@@ -92,8 +92,9 @@ ini_close();
 
 if(obj_char.mode == 0)
 {
+    audio_play_sound(sfx_coin_2,1,false);
     instance_destroy();
-    obj_char.hp = obj_char.hp + 100 ;
+    obj_char.hp = obj_char.hp + 15 ;
     if (obj_char.hp &gt; hp) obj_char.hp = hp;
 }
 </string>

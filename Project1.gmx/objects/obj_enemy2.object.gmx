@@ -25,12 +25,34 @@
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>///Calibrate position
+            <string>///variables
 
-while (y&gt;656 || y&lt;160)
+/*while (y&gt;672 || y&lt;160)
 {
     y = random(room_height);
-}
+}*/
+
+image_index = 0;
+image_speed = 0;
+
+hsp = 0;
+vsp = 0;
+hsp_f = .0;
+vsp_f = .0;
+grv = 0.2;
+frc = 0.1;
+acc = 0.5;
+jmp = -5
+hsp_max = 3;
+vsp_max = 5;
+jbuff = 0;
+hit = 0;
+hp = 10;
+time = 0;
+gap = random_range(120,180);
+ypos = y;
+obj_char.kill = 0;
+
 </string>
           </argument>
         </arguments>
@@ -53,33 +75,45 @@ while (y&gt;656 || y&lt;160)
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>if(x &gt; 935)
+            <string>/* now theses codes are placed in par_enemy
+if(x &gt; 950)
 {
     x -= 6;
 }
-</string>
-          </argument>
-        </arguments>
-      </action>
-    </event>
-    <event eventtype="4" ename="obj_hitbox">
-      <action>
-        <libid>1</libid>
-        <id>603</id>
-        <kind>7</kind>
-        <userelative>0</userelative>
-        <isquestion>0</isquestion>
-        <useapplyto>-1</useapplyto>
-        <exetype>2</exetype>
-        <functionname></functionname>
-        <codestring></codestring>
-        <whoName>self</whoName>
-        <relative>0</relative>
-        <isnot>0</isnot>
-        <arguments>
-          <argument>
-            <kind>1</kind>
-            <string>instance_destroy();
+
+///Main Logic
+
+//====Tick
+vsp += grv;
+hsp = Approach(hsp,0,frc);
+
+if (hit != 0)
+{
+    image_index = 1;
+    hit = Approach(hit,0,0.05);
+    hp -= obj_char.atk;
+}
+
+if (hp == 0)
+{
+    audio_play_sound(sfx_enemy_die,1,false);
+    instance_destroy();
+    obj_char.kill = ypos;
+}
+
+else image_index = 0;
+*/
+
+
+event_inherited();
+
+//bullet 1
+if(obj_char.mode == 0) time += 1;
+if(time &gt; gap)
+{
+    time = 0;
+    instance_create(128,600,obj_bullet2);
+}
 </string>
           </argument>
         </arguments>

@@ -67,6 +67,7 @@ if(obj_char.mode == 1) speed = 0;
 
 if(obj_char.mode ==0 &amp;&amp; place_meeting(x,y,obj_char))
 {
+    audio_play_sound(sfx_hit_1,1,false);
     if(obj_char.hp &gt;10) obj_char.hp -= 10;
     else obj_char.hp = 0;
     instance_destroy();
