@@ -5,7 +5,7 @@
   <visible>-1</visible>
   <depth>0</depth>
   <persistent>0</persistent>
-  <parentName>self</parentName>
+  <parentName>&lt;undefined&gt;</parentName>
   <maskName>&lt;undefined&gt;</maskName>
   <events>
     <event eventtype="0" enumb="0">
@@ -113,8 +113,11 @@ if(obj_char_test.mode == 0) time +=1;
 if(time &gt; gap)
 {
     time = 0;
-    instance_create(128,600,obj_bullet2_test);
-    obj_char.hp -= 10;
+    var i;
+    for (i=0; 32*i&lt;x; i+=1)
+    {
+        instance_create(32*i,y,obj_bullet3_test);
+    }
 }
 
 </string>

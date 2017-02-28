@@ -141,8 +141,8 @@ if (mode == 0)
     
     if (key_act) &amp;&amp; (jump&gt;0)
     {
-        if(jump == 2) audio_play_sound(sfx_jump_1,1,false);
-        if(jump == 1) audio_play_sound(sfx_jump_2,1,false);
+        if(jump == 2) audio_play_sound(sfx_jump_1,3,false);
+        if(jump == 1) audio_play_sound(sfx_jump_2,3,false);
         jump -= 1;
         vsp = -jumpspeed;
     }

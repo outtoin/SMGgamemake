@@ -25,7 +25,7 @@
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>enemy_id = instance_create(x, y, obj_enemy1);
+            <string>enemy_id = instance_create(x, y, obj_enemy3);
 </string>
           </argument>
         </arguments>
@@ -48,7 +48,7 @@
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>if (instance_find(obj_enemy1, enemy_id) == noone)
+            <string>if (instance_find(obj_enemy3, enemy_id) == noone)
 {
     instance_destroy();
 }

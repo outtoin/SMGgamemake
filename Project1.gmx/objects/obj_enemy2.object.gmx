@@ -27,11 +27,6 @@
             <kind>1</kind>
             <string>///variables
 
-/*while (y&gt;672 || y&lt;160)
-{
-    y = random(room_height);
-}*/
-
 image_index = 0;
 image_speed = 0;
 
@@ -75,39 +70,9 @@ obj_char.kill = 0;
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>/* now theses codes are placed in par_enemy
-if(x &gt; 950)
-{
-    x -= 6;
-}
+            <string>event_inherited();
 
-///Main Logic
-
-//====Tick
-vsp += grv;
-hsp = Approach(hsp,0,frc);
-
-if (hit != 0)
-{
-    image_index = 1;
-    hit = Approach(hit,0,0.05);
-    hp -= obj_char.atk;
-}
-
-if (hp == 0)
-{
-    audio_play_sound(sfx_enemy_die,1,false);
-    instance_destroy();
-    obj_char.kill = ypos;
-}
-
-else image_index = 0;
-*/
-
-
-event_inherited();
-
-//bullet 1
+//bullet 2
 if(obj_char.mode == 0) time += 1;
 if(time &gt; gap)
 {

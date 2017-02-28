@@ -9,7 +9,6 @@
     <sound>sound\BGM_Inn</sound>
     <sound>sound\BGM_mainmenu</sound>
     <sound>sound\sfx_buttonmove</sound>
-    <sound>sound\sfx_charwalk</sound>
     <sound>sound\sfx_jump_1</sound>
     <sound>sound\sfx_jump_2</sound>
     <sound>sound\sfx_atk_1</sound>
@@ -17,6 +16,7 @@
     <sound>sound\sfx_coin_1</sound>
     <sound>sound\sfx_coin_2</sound>
     <sound>sound\sfx_hit_1</sound>
+    <sound>sound\BGM_startmenu</sound>
   </sounds>
   <sprites name="sprites">
     <sprite>sprites\char_run</sprite>
@@ -31,15 +31,16 @@
     <sprite>sprites\spr_enemy_testcheck</sprite>
     <sprite>sprites\char_atk_motion</sprite>
     <sprite>sprites\char_atk_hitbox</sprite>
-    <sprite>sprites\enemy_bullet_1</sprite>
-    <sprite>sprites\enemy_bullet_2_thunder</sprite>
+    <sprite>sprites\spr_bullet_1</sprite>
+    <sprite>sprites\spr_bullet_2_thunder</sprite>
+    <sprite>sprites\spr_bullet_3_finalspark</sprite>
     <sprite>sprites\spr_enemy_afterimage</sprite>
     <sprite>sprites\spr_atk_bomb</sprite>
     <sprite>sprites\spr_missiles</sprite>
     <sprite>sprites\spr_exit</sprite>
     <sprite>sprites\spr_tutend</sprite>
     <sprite>sprites\spr_start</sprite>
-    <sprite>sprites\sprite18</sprite>
+    <sprite>sprites\spr_button1</sprite>
   </sprites>
   <backgrounds name="background">
     <background>background\GameBackground</background>
@@ -72,6 +73,7 @@
     <object>objects\obj_gage</object>
     <object>objects\text_score</object>
     <object>objects\snd_mainmenu</object>
+    <object>objects\snd_startmenu</object>
     <object>objects\snd_StageBGM</object>
     <object>objects\snd_Gameover</object>
     <objects name="temp">
@@ -82,9 +84,11 @@
     <objects name="enemy">
       <object>objects\obj_bullet1</object>
       <object>objects\obj_bullet2</object>
+      <object>objects\obj_bullet3</object>
       <object>objects\par_enemy</object>
       <object>objects\obj_enemy1</object>
       <object>objects\obj_enemy2</object>
+      <object>objects\obj_enemy3</object>
     </objects>
     <objects name="system">
       <object>objects\obj_save</object>
@@ -103,6 +107,7 @@
       <object>objects\obj_enemy_test</object>
       <object>objects\obj_bullet1_test</object>
       <object>objects\obj_bullet2_test</object>
+      <object>objects\obj_bullet3_test</object>
       <object>objects\obj_char_test</object>
     </objects>
     <objects name="mainmenu">
