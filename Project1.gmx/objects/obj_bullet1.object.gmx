@@ -28,7 +28,7 @@
             <string>///initialize variable
 
 hit = 0;
-
+is_hit = false;
 
 xpos = x;
 ypos = y;
@@ -63,14 +63,27 @@ direction = point_direction(xpos,ypos,xchar,ychar);
 
 if(obj_char.mode == 0) speed = 4;
 if(obj_char.mode == 1) speed = 0;
-
-
-if(obj_char.mode ==0 &amp;&amp; place_meeting(x,y,obj_char))
+if(is_hit)
 {
-    audio_play_sound(sfx_hit_1,1,false);
-    if(obj_char.hp &gt;10) obj_char.hp -= 10;
-    else obj_char.hp = 0;
-    instance_destroy();
+    speed = 0;
+    if (image_index &gt; 79) instance_destroy();
+}
+
+
+if(obj_char.mode == 0 &amp;&amp; place_meeting(x,y,obj_char))
+{
+    
+    sprite_index = spr_fire_effect_resize;
+    image_speed = 0.8
+    speed = 0;
+    if(obj_char.hp &gt; 10 &amp;&amp; !is_hit)
+    {
+        obj_char.hp -= 10;
+        is_hit = true
+        audio_play_sound(sfx_hit_1,1,false);
+    } 
+    else if(obj_char.hp &lt;= 10 &amp;&amp; !is_hit) obj_char.hp = 0;
+    if (image_index &gt; 79) instance_destroy();
 }
 
 if(obj_char.kill == ypos)

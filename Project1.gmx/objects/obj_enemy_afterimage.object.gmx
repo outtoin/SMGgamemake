@@ -25,7 +25,15 @@
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>enemy_id = instance_create(x, y, obj_enemy3);
+            <string>//start with
+enemy = obj_enemy1;
+dice = random_range(0,60)
+
+if (dice &gt;= 0 &amp;&amp; dice &lt; 40) enemy = obj_enemy1;
+else if (dice &gt;= 40 &amp;&amp; dice &lt; 50) enemy = obj_enemy2;
+else enemy = obj_enemy3;
+
+enemy_id = instance_create(x, y, enemy);
 </string>
           </argument>
         </arguments>
@@ -48,7 +56,7 @@
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>if (instance_find(obj_enemy3, enemy_id) == noone)
+            <string>if (instance_find(enemy, enemy_id) == noone)
 {
     instance_destroy();
 }
