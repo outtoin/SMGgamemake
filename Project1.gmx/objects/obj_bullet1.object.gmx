@@ -74,7 +74,7 @@ if(obj_char.mode == 0 &amp;&amp; place_meeting(x,y,obj_char))
 {
     
     sprite_index = spr_fire_effect_resize;
-    image_speed = 0.8
+    image_speed = 4;
     speed = 0;
     if(obj_char.hp &gt; 10 &amp;&amp; !is_hit)
     {
