@@ -191,12 +191,44 @@ if (mode == 1)
     }
         
     // Hitbox
+    var hitbox = noone;
     if (image_index &gt;= 1) &amp;&amp; (image_index &lt;= 3)
+    {   
+        hitbox = instance_create(x, y, obj_hitbox)
+        with (hitbox)
+        {
+            image_xscale = other.image_xscale;
+            enemy = instance_place(x, y, par_enemy);
+            if (enemy) &amp;&amp; (!is_hit)
+            {
+                enemy.hit = true;
+                is_hit = true;
+            }
+        }
+    }
+    else
     {
+        if (hitbox != noone)
+        {
+            with(hitbox) instance_destroy();
+        }
+    }
+        
+        
+        /*
         with (instance_create(x, y, obj_hitbox))
         {
             image_xscale = other.image_xscale;
+            var inst;
+            if (instance_place(x, y, par_enemy))
+            {  
+                if(inst.hit = 0 &amp;&amp; !is_hit)
+                {
+                    inst.hit = 1;
+                    is_hit = true;
+                }
                 
+            }
             with (instance_place(x, y, par_enemy))
             {
                 if (hit = 0)
@@ -204,8 +236,7 @@ if (mode == 1)
                     hit = 1;
                 }
             }
-        }
-    }
+        }*/
     
 
     //vertical collision

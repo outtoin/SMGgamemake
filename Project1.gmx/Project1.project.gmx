@@ -118,6 +118,7 @@
       <object>objects\obj_enemy_afterimage</object>
       <object>objects\obj_bombcounter</object>
       <object>objects\obj_tutorial_end</object>
+      <object>objects\obj_calc</object>
     </objects>
     <objects name="Testing_ssh">
       <object>objects\obj_enemy_afterimage_test</object>
@@ -136,6 +137,7 @@
     <object>objects\obj_missiles</object>
     <object>objects\obj_exit</object>
   </objects>
+  <timelines name="timelines"/>
   <rooms name="rooms">
     <room>rooms\rm_start</room>
     <room>rooms\rm_mainmenu</room>
