@@ -27,6 +27,7 @@
     <sprite>sprites\menuarrow</sprite>
     <sprite>sprites\spr_enemy</sprite>
     <sprite>sprites\spr_enemy2</sprite>
+    <sprite>sprites\spr_enemy3</sprite>
     <sprite>sprites\spr_enemy_tmp</sprite>
     <sprite>sprites\spr_enemy_testcheck</sprite>
     <sprite>sprites\char_atk_motion</sprite>
