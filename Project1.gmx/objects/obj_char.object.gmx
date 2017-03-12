@@ -129,6 +129,16 @@ if (key_change)
 //Jump Mode
 if (mode == 0)
 {
+    // initial hitbox error fix
+    if (instance_exists(obj_hitbox))
+    {
+        with(instance_find(obj_hitbox, 0)) 
+        {
+            instance_destroy();
+        }
+    }  
+
+
     //React to inputs
     /*move = key_left + key_right;
     hsp = move * movespeed; */
