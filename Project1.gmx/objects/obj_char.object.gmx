@@ -194,7 +194,10 @@ if (mode == 1)
     var hitbox = noone;
     if (image_index &gt;= 1) &amp;&amp; (image_index &lt;= 3)
     {   
-        hitbox = instance_create(x, y, obj_hitbox)
+        if (instance_number(obj_hitbox) == 0)
+        {
+            hitbox = instance_create(x, y, obj_hitbox)
+        }
         with (hitbox)
         {
             image_xscale = other.image_xscale;
@@ -206,11 +209,14 @@ if (mode == 1)
             }
         }
     }
-    else
+    else if (image_index &gt; 3)
     {
-        if (hitbox != noone)
+        if (instance_exists(obj_hitbox))
         {
-            with(hitbox) instance_destroy();
+            with(instance_find(obj_hitbox, 0)) 
+            {
+                instance_destroy();
+            }
         }
     }
         
