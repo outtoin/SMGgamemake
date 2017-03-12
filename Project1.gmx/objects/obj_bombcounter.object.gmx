@@ -34,6 +34,8 @@ bomb[1] = 0;
 bomb[2] = 0;
 bomb[3] = 0;
 bomb[4] = 0;
+bomb[5] = 0;
+bomb[6] = 0;
 </string>
           </argument>
         </arguments>
@@ -59,12 +61,12 @@ bomb[4] = 0;
             <string>///Fill Bomb Array
 for(i=0;i &lt; obj_char.bomb;i+=1)
 {
-    bomb[i] = 8;
+    bomb[i] = 4;
 }
 
 bomb[i] = obj_char.bomb_stack;
 
-for(k=i+1;k&lt;5;k+=1)
+for(k=i+1;k&lt;7;k+=1)
 {
     bomb[k] = 0;
 }
@@ -98,7 +100,7 @@ draw_set_colour(c_black);
     for(i=0;i&lt;array_length_1d(bomb);i+=1)
     {
         //raw_text(28+i*36,60,bomb[i]);
-        draw_sprite(spr_atk_bomb,bomb[i],28+i*36,60)
+        draw_sprite(spr_atk_bomb,bomb[i],28+i*36,60);
     }
 </string>
           </argument>
