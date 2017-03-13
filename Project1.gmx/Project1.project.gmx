@@ -141,6 +141,15 @@
     </objects>
     <object>objects\obj_missiles</object>
     <object>objects\obj_exit</object>
+    <objects name="room_transitions">
+      <objects name="transitions">
+        <object>objects\par_fade</object>
+        <object>objects\obj_fade_to_mainmenu</object>
+        <object>objects\obj_fade_to_tutorial</object>
+        <object>objects\obj_fade_to_ingame</object>
+        <object>objects\obj_fade_to_loading</object>
+      </objects>
+    </objects>
   </objects>
   <rooms name="rooms">
     <room>rooms\rm_start</room>

@@ -6,8 +6,8 @@ switch (menu_pos)
 {
     case 0:
     {
-        if (tutorial == 0) room_goto(rm_tutorial);
-        else room_goto(rm_mainmenu);
+        if (tutorial == 0) instance_create(0, 0, obj_fade_to_tutorial);
+        else instance_create(0, 0, obj_fade_to_mainmenu);
         break;
     }
     case 1:
