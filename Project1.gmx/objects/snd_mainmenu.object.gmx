@@ -48,7 +48,8 @@
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>audio_play_sound(BGM_mainmenu,1,true);
+            <string>
+audio_play_sound(BGM_mainmenu,1,true);
 </string>
           </argument>
         </arguments>

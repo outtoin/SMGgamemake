@@ -25,8 +25,11 @@
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>menu[0] = "Reset Data";
-menu[1] = "Return";
+            <string>i = "Off";
+
+menu[0] = "Reset Data";
+menu[1] = "Full screen      " + i;
+menu[2] = "Return";
 
 space = 64;
 menu_pos = 0;
@@ -70,7 +73,7 @@ var push;
 push = max(keyboard_check_released(vk_enter),0);
 if (push == 1) scr_option();
 
-
+menu[1] = "Full screen      " + i;
 </string>
           </argument>
         </arguments>

@@ -88,19 +88,19 @@ if (room == rm_ingame)
 {
 
     draw_set_color(c_black);
-    draw_text(xpos+24,24,obj_char.hp);
+    draw_text(xpos+24,28,obj_char.hp);
     //Check Time
     //draw_text(360,128,obj_char.time);
     //draw_text(392,128,obj_orbspawn.stack);
     
     draw_set_color(c_black);
-    draw_rectangle(12,12,xpos+4,36,0);
+    draw_rectangle(12,12,xpos+4,44,0);
     
     draw_set_color(c_maroon);
-    draw_rectangle(16,16,xpos,32,0);
+    draw_rectangle(16,16,xpos,40,0);
     
     draw_set_color(c_lime);
-    draw_rectangle(16,16,16+320*obj_char.hp/100,32,0);
+    draw_rectangle(16,16,16+320*obj_char.hp/100,40,0);
     
     //Check State
     draw_set_color(c_black);

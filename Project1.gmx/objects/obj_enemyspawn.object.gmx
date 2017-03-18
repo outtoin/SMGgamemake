@@ -62,7 +62,7 @@ if (obj_char.mode == 0)
 
 if (instance_number(par_enemy) &lt;= 5 &amp;&amp; obj_char.mode == 0 &amp;&amp; time &gt; 10 &amp;&amp; spawn_time &gt; random_range(400, 500))
 {
-    while(position_meeting(1312, yaxis - 20, obj_enemy_afterimage) || position_meeting(1312, yaxis + 20, obj_enemy_afterimage))
+    while(position_meeting(1312, yaxis - 20, obj_enemy_afterimage) || position_meeting(1312, yaxis +20, obj_enemy_afterimage))
     {
         yaxis = random_range(160, 624);
     }

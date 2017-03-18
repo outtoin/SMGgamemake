@@ -71,12 +71,12 @@ kill = 0;
             <kind>1</kind>
             <string>/// Key input &amp; Mode Chanage
 //Get the player's input
-key_right = keyboard_check(vk_right);
-key_left = -keyboard_check(vk_left);
+//key_right = keyboard_check(vk_right);
+//key_left = -keyboard_check(vk_left);
 key_up = -keyboard_check(vk_up);
 key_down = keyboard_check(vk_down);
-key_act = keyboard_check_pressed(ord("Z"));
-key_change = keyboard_check_pressed(ord("X"));
+key_act = keyboard_check_pressed(vk_space);
+key_change = keyboard_check_pressed(vk_right) or keyboard_check_pressed(vk_left);
 xpos = x;
 ypos = y;
 
@@ -89,15 +89,15 @@ if (key_change)
         mode = 1;
         vsp = 0;
         x = 896;
-        y = 656;
+        y = 640;
     }
     else
     {
         sprite_index = char_run;
         mode = 0;
         vsp = 0;
-        x = 128;
-        y = 656;
+        x = 160;
+        y = 640;
     }   
 }
 
@@ -144,7 +144,7 @@ if (mode == 0)
     hsp = move * movespeed; */
     if (vsp &lt; 10) vsp += grav;
     
-    if (place_meeting(x,y+1,block_floor))
+    if (place_meeting(x,y+1,block_floor2))
     {
         jump = jump_max ;
     }
@@ -171,9 +171,9 @@ if (mode == 0)
     */
     
     //vertical collision
-    if (place_meeting(x,y+vsp,block_floor))
+    if (place_meeting(x,y+vsp,block_floor2))
     {
-        while(!place_meeting(x,y+sign(vsp),block_floor))
+        while(!place_meeting(x,y+sign(vsp),block_floor2))
         {
             y += sign(vsp);
         }

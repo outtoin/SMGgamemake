@@ -73,7 +73,7 @@ depth = 0;
             <kind>1</kind>
             <string>draw_sprite(spr_tip,i,640,360);
 draw_set_color(c_white);
-draw_text(640,600,i);
+//draw_text(640,600,i);
 </string>
           </argument>
         </arguments>

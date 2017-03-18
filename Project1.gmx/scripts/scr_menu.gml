@@ -12,7 +12,8 @@ switch (menu_pos)
     }
     case 1:
     {   
-        room_goto(rm_option);
+        instance_create(x,y,obj_menu_option);
+        instance_destroy();
         break;
     }
     case 2:
