@@ -26,6 +26,8 @@
           <argument>
             <kind>1</kind>
             <string>img_speed = 0.4;
+
+is_hit = false;
 </string>
           </argument>
         </arguments>
@@ -48,7 +50,14 @@
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>image_speed = img_speed;
+            <string>if (obj_char.mode == 0 &amp;&amp; !is_hit &amp;&amp; image_index &gt; 4)
+{
+    obj_char.char_hit = 1;
+    obj_char.hp -= 10;
+    is_hit = true;
+    audio_play_sound(sfx_hit_1,1,false);
+}
+image_speed = img_speed;
 if(image_index &gt; 18) instance_destroy();
 </string>
           </argument>

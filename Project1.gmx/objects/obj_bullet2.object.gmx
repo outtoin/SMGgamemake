@@ -58,7 +58,7 @@ if (obj_char.mode==1) image_speed = 0;
 
 if (image_index &gt; image_number-1)
 {
-    instance_create(obj_char.x, obj_char.y - 36, obj_bullet2_thunder);
+    instance_create(obj_char.x, obj_char.y - 42, obj_bullet2_thunder);
     instance_destroy();
 }
 

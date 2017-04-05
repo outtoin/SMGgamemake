@@ -78,8 +78,9 @@ if(obj_char.mode == 0 &amp;&amp; place_meeting(x,y,obj_char))
     speed = 0;
     if(obj_char.hp &gt; 10 &amp;&amp; !is_hit)
     {
+        obj_char.char_hit = 1;
         obj_char.hp -= 10;
-        is_hit = true
+        is_hit = true;
         audio_play_sound(sfx_hit_1,1,false);
     } 
     else if(obj_char.hp &lt;= 10 &amp;&amp; !is_hit) obj_char.hp = 0;

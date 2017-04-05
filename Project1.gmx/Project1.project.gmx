@@ -19,20 +19,15 @@
     <sound>sound\BGM_startmenu</sound>
   </sounds>
   <sprites name="sprites">
-    <sprite>sprites\char_run</sprite>
-    <sprite>sprites\char_atk</sprite>
     <sprite>sprites\tile1</sprite>
     <sprite>sprites\tile2</sprite>
     <sprite>sprites\orb_health</sprite>
     <sprite>sprites\orb_score</sprite>
     <sprite>sprites\menuarrow</sprite>
-    <sprite>sprites\spr_enemy</sprite>
     <sprite>sprites\spr_enemy2</sprite>
     <sprite>sprites\spr_enemy3</sprite>
     <sprite>sprites\spr_enemy_tmp</sprite>
     <sprite>sprites\spr_enemy_testcheck</sprite>
-    <sprite>sprites\char_atk_motion</sprite>
-    <sprite>sprites\char_atk_hitbox</sprite>
     <sprite>sprites\spr_bullet_1</sprite>
     <sprite>sprites\spr_bullet_2_thunder</sprite>
     <sprite>sprites\spr_thunder</sprite>
@@ -58,9 +53,35 @@
         <sprite>sprites\spr_thunder_effect_resize</sprite>
         <sprite>sprites\spr_ice_effect_resize</sprite>
       </sprites>
+      <sprite>sprites\spr_dust</sprite>
     </sprites>
     <sprite>sprites\spr_load</sprite>
     <sprite>sprites\spr_tip</sprite>
+    <sprites name="char">
+      <sprite>sprites\char_atk</sprite>
+      <sprite>sprites\char_atk_motion</sprite>
+      <sprite>sprites\char_run</sprite>
+      <sprite>sprites\char_atk_hitbox</sprite>
+      <sprite>sprites\spr_char_run</sprite>
+      <sprite>sprites\spr_char_atk_walk</sprite>
+      <sprite>sprites\spr_char_atk_motion</sprite>
+      <sprite>sprites\spr_char_atk_shadow</sprite>
+      <sprite>sprites\sprite50</sprite>
+      <sprite>sprites\spr_char_hit</sprite>
+      <sprite>sprites\spr_fire</sprite>
+      <sprite>sprites\spr_char_atk_fire</sprite>
+    </sprites>
+    <sprites name="enemy">
+      <sprite>sprites\spr_enemy2_new</sprite>
+      <sprite>sprites\spr_enemy2_orb</sprite>
+      <sprite>sprites\spr_enemy1_orb</sprite>
+      <sprite>sprites\spr_enemy3_atk</sprite>
+      <sprite>sprites\spr_enemy2_walk</sprite>
+      <sprite>sprites\spr_enemy1_walk</sprite>
+      <sprite>sprites\spr_enemy1</sprite>
+      <sprite>sprites\spr_enemy3_walk</sprite>
+      <sprite>sprites\spr_enemy3_new</sprite>
+    </sprites>
   </sprites>
   <backgrounds name="background">
     <background>background\GameBackground</background>
@@ -107,10 +128,13 @@
       <object>objects\obj_bullet2</object>
       <object>objects\obj_bullet2_thunder</object>
       <object>objects\obj_bullet3</object>
+      <object>objects\obj_bullet3_new1</object>
       <object>objects\par_enemy</object>
       <object>objects\obj_enemy1</object>
       <object>objects\obj_enemy2</object>
       <object>objects\obj_enemy3</object>
+      <object>objects\obj_enemy2_orb</object>
+      <object>objects\obj_enemy1_orb</object>
     </objects>
     <objects name="system">
       <object>objects\obj_save</object>
@@ -152,6 +176,9 @@
         <object>objects\obj_fade_to_loading</object>
       </objects>
     </objects>
+    <object>objects\obj_dust</object>
+    <object>objects\obj_dust2</object>
+    <object>objects\obj_test</object>
   </objects>
   <rooms name="rooms">
     <room>rooms\rm_start</room>

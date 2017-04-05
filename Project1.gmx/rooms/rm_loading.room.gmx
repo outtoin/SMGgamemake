@@ -53,6 +53,7 @@
   <instances>
     <instance objName="obj_tip" x="640" y="360" name="inst_221FD406" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_loading" x="640" y="360" name="inst_1DE76FA2" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_bomb" x="1440" y="320" name="inst_2E1A4704" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
   </instances>
   <tiles/>
   <PhysicsWorld>0</PhysicsWorld>
