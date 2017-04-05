@@ -90,7 +90,7 @@ x += orb_spd;
 {
     audio_play_sound(sfx_coin_1,1,false);
     instance_destroy();
-    score = score + 10 * obj_gage.magnify_scr ;
+    score = score + 10 * obj_gage.magnify_scr * obj_gage.magnify_time;
     obj_char.bomb_stack += 1;
 }
 </string>

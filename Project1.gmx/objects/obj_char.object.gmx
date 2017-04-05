@@ -44,7 +44,7 @@ atk_img_spd = 0.5;
 xpos = 0;
 ypos = 0;
 atk = 10;
-bomb = 4;
+bomb = 3;
 bomb_stack = 0;
 time = 0;
 kill = 0;
@@ -234,7 +234,7 @@ if (mode == 1)
         audio_play_sound(sfx_atk_1,1,false);
         sprite_index = spr_char_atk_fire;
         image_speed = atk_img_spd;
-        //bomb -=1;
+        bomb -=1;
         is_dust = false;
     }
     /*
@@ -297,9 +297,9 @@ if (bomb_stack == 4)
     bomb +=1;
     bomb_stack=0;
 }
-if (bomb == 7)
+if (bomb == 5)
 {
-    bomb = 7;
+    bomb = 5;
     bomb_stack = 0;
 }
 //HP

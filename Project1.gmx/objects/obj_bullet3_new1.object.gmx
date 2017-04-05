@@ -57,7 +57,7 @@ if(obj_char.mode ==0 &amp;&amp; place_meeting(x,y,obj_char) &amp;&amp; !is_hit)
 {
     obj_char.char_hit = 1;
     
-    //audio_play_sound(sfx_hit_1,1,false);
+    sound_play(sfx_bullet_3);
     if(obj_char.hp &gt; 10) obj_char.hp -= 10;
     else obj_char.hp = 0;
     

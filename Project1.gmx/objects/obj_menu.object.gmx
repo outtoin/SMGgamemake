@@ -28,8 +28,8 @@
             <string>menu[0] = "Game Start";
 menu[1] = "Options";
 menu[2] = "Exit";
-menu[3] = "temp";
-menu[4] = "Work_SSH";
+//menu[3] = "temp";
+//menu[4] = "Work_SSH";
 
 space = 64;
 menu_pos = 0;
@@ -106,10 +106,10 @@ draw_set_color(c_white);
 var m;
 for ( m = 0; m &lt; array_length_1d(menu); m += 1)
 {
-    draw_text(x + space, y + (m * space), string(menu[m]));
+    draw_text(x + space, y + (m * space*2), string(menu[m]));
 }
 
-draw_sprite(sprite_index, 0, x + 8, y + menu_pos * space)
+draw_sprite(sprite_index, 0, x + 8, y + menu_pos * space*2)
 </string>
           </argument>
         </arguments>

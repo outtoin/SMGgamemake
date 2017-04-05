@@ -55,7 +55,7 @@ is_hit = false;
     obj_char.char_hit = 1;
     obj_char.hp -= 10;
     is_hit = true;
-    audio_play_sound(sfx_hit_1,1,false);
+    //audio_play_sound(sfx_hit_1,1,false);
 }
 image_speed = img_speed;
 if(image_index &gt; 18) instance_destroy();
