@@ -25,11 +25,7 @@
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>///set initial variable
-time = 0;
-magnify_scr = 1;
-magnify_time = 1;
-num_enemy = 0;
+            <string>num = 0;
 </string>
           </argument>
         </arguments>
@@ -52,36 +48,33 @@ num_enemy = 0;
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>if (obj_char.mode == 0)
-{
-    magnify_scr += 0.008
-    /*time += 1;
-    if (time == 60)
-    {
-        time = 0;
-        magnify_scr += 0.5
-    }*/
-}
-
-if(instance_number(par_enemy)&gt;= num_enemy)
-{
-    num_enemy = instance_number(par_enemy);
-}
-if(instance_number(par_enemy)&lt; num_enemy)
-{
-    magnify_scr -= 5;
-    num_enemy = instance_number(par_enemy);
-}
-
-
-if (magnify_scr &gt;=20) magnify_time = 0.1*magnify_scr;
-if (magnify_scr &gt;=25) magnify_time = 0.2*magnify_scr;
-if (magnify_scr &lt;20) magnify_time = 1;
-
-if(magnify_scr &gt;= 30) magnify_scr = 30;
-if(magnify_scr &lt;= 1) magnify_scr = 1;
-
-
+            <string>if(num&gt;=0 &amp;&amp; num&lt;2 &amp;&amp; keyboard_check_pressed(vk_right)) num +=1;
+if(num&gt;0 &amp;&amp; num&lt;=2 &amp;&amp; keyboard_check_pressed(vk_left)) num -=1;
+</string>
+          </argument>
+        </arguments>
+      </action>
+    </event>
+    <event eventtype="7" enumb="5">
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>ini_open("save.ini");
+ini_write_real("system","tutorial",1);
+ini_close();
 </string>
           </argument>
         </arguments>
@@ -104,7 +97,35 @@ if(magnify_scr &lt;= 1) magnify_scr = 1;
         <arguments>
           <argument>
             <kind>1</kind>
-            <string></string>
+            <string>draw_set_color(c_white);
+draw_sprite(spr_tut,num,640,360);
+if(num &lt; 2) draw_text(1162,672,"NEXT&gt;&gt;");
+if(num &gt; 0) draw_text(96,672,"&lt;&lt;PREV")
+draw_text(550,672, "Enter to Exit Tutorial")
+</string>
+          </argument>
+        </arguments>
+      </action>
+    </event>
+    <event eventtype="9" enumb="13">
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>room_goto(rm_mainmenu);
+</string>
           </argument>
         </arguments>
       </action>

@@ -17,6 +17,8 @@
     <sound>sound\sfx_coin_2</sound>
     <sound>sound\sfx_hit_1</sound>
     <sound>sound\BGM_startmenu</sound>
+    <sound>sound\sfx_bullet_2</sound>
+    <sound>sound\sfx_bullet_3</sound>
   </sounds>
   <sprites name="sprites">
     <sprite>sprites\tile1</sprite>
@@ -111,6 +113,7 @@
       <sprite>sprites\spr_enemy3_walk</sprite>
       <sprite>sprites\spr_enemy3_new</sprite>
     </sprites>
+    <sprite>sprites\spr_tut</sprite>
   </sprites>
   <backgrounds name="background">
     <background>background\GameBackground</background>
@@ -209,6 +212,7 @@
     <object>objects\obj_dust</object>
     <object>objects\obj_dust2</object>
     <object>objects\obj_test</object>
+	<object>objects\obj_tut</object>
     <objects name="effect">
       <object>objects\obj_cast_3</object>
       <object>objects\obj_heal_3</object>

@@ -29,10 +29,10 @@
 money = ini_read_real("status","money",0);
 hp = ini_read_real("status","hp",50);
 
-if(hp&lt;300 &amp;&amp; money&gt;100)
+if(hp&lt;300 &amp;&amp; money&gt;1000)
 {
-    money -= 100;
-    hp += 10;
+    money -= 1000;
+    hp += 100;
 }
 
 ini_write_real("status","money",money);

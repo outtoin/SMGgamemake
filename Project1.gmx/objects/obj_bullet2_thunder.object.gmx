@@ -59,7 +59,7 @@ is_hit = false;
     }
     else obj_char.hp = 0;
     is_hit = true;
-    audio_play_sound(sfx_hit_1,1,false);
+    //audio_play_sound(sfx_hit_1,1,false);
 }
 image_speed = img_speed;
 if(image_index &gt; 18) instance_destroy();
