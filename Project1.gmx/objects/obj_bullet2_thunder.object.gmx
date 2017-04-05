@@ -53,7 +53,11 @@ is_hit = false;
             <string>if (obj_char.mode == 0 &amp;&amp; !is_hit &amp;&amp; image_index &gt; 4)
 {
     obj_char.char_hit = 1;
-    obj_char.hp -= 10;
+    if (obj_char.hp &gt; 10)
+    {
+        obj_char.hp -= 10;
+    }
+    else obj_char.hp = 0;
     is_hit = true;
     audio_play_sound(sfx_hit_1,1,false);
 }

@@ -26,8 +26,6 @@
           <argument>
             <kind>1</kind>
             <string>img_speed = 0.1;
-if(obj_char.hp &gt;10) obj_char.hp -= 10;
-else obj_char.hp = 0;
 
 ypos = y;
 

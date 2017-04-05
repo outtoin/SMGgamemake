@@ -90,6 +90,7 @@ if(time &gt;= gap)
 {   
     image_index = 1;
     time = 0;
+    instance_create(x, y, obj_cast_3);
     instance_create(x - 30, y, obj_enemy2_orb);
     instance_create(140,600,obj_bullet2);
     motion = 1;   

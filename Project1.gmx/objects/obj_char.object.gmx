@@ -39,7 +39,7 @@ jump = 0;
 jump_max = 2;
 mode = 0;
 img_spd = 0.1;
-atk_img_spd = 0.5;
+atk_img_spd = 0.6;
 //hp = 100;
 xpos = 0;
 ypos = 0;
@@ -54,6 +54,23 @@ char_hit = 0;
 is_dust = false;
 is_air = false;
 is_hit = false;
+
+special_time = 0;
+
+//automatic healing
+healing_level = 1;
+healing_timer = 0;
+healing_term = 600 - healing_level * 42;
+healing_amount = 3;
+
+//automatic shield
+shield_level = 20;
+shield_term_timer = 0;
+shield_term = 1000 - shield_level * 20;
+shield_timer = 0;
+shield_time = 60 + 6 * shield_level;
+
+//special_attack
 </string>
           </argument>
         </arguments>
@@ -84,6 +101,7 @@ key_up = -keyboard_check(vk_up);
 key_down = keyboard_check(vk_down);
 key_act = keyboard_check_pressed(vk_space);
 key_change = keyboard_check_pressed(vk_right) or keyboard_check_pressed(vk_left);
+key_special = keyboard_check(vk_control);
 xpos = x;
 ypos = y;
 
@@ -135,8 +153,7 @@ if (key_change)
 
 //Jump Mode
 if (mode == 0)
-{
-    
+{ 
     // initial hitbox error fix
     if (instance_exists(obj_hitbox))
     {
@@ -212,6 +229,43 @@ if (mode == 0)
         }
         vsp = 0;
     }
+    
+    //specials
+    
+    //automatic healing
+    if (healing_level &gt; 0)
+    {
+        healing_timer += 1;
+        if (healing_timer &gt;= healing_term)
+        {   
+            instance_create(x-5, y-40, obj_heal_3);
+            healing_timer = 0;
+            hp += healing_amount;
+        }
+    }
+    
+    //automatic shield
+    if (shield_level &gt; 0)
+    {
+        shield_term_timer += 1;
+        if (shield_term_timer &gt;= shield_term)
+        {
+            instance_create(x-5, y, obj_auto_shield);
+            shield_term_timer = 0;
+        }
+    }
+
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
     y += vsp;
 }
 
@@ -232,13 +286,13 @@ if (mode == 1)
     if(key_act &amp;&amp; bomb&gt;0)
     {
         audio_play_sound(sfx_atk_1,1,false);
-        sprite_index = spr_char_atk_fire;
+        sprite_index = spr_char_atk_shadow;
         image_speed = atk_img_spd;
         //bomb -=1;
         is_dust = false;
     }
-    /*
-    if (sprite_index == sprite51) &amp;&amp; (image_index &gt;= 5) &amp;&amp; (image_index &lt;= 8)
+    
+    if (sprite_index == spr_char_atk_shadow) &amp;&amp; (image_index &gt;= 5) &amp;&amp; (image_index &lt;= 8)
     {
         if (!is_dust)
         {
@@ -247,10 +301,10 @@ if (mode == 1)
         }
         
     }
-    */
+    
     // Hitbox
     var hitbox = noone;
-    if (sprite_index == spr_char_atk_fire) &amp;&amp; (image_index &gt;= 2) &amp;&amp; (image_index &lt;= 10)
+    if (sprite_index == spr_char_atk_shadow) &amp;&amp; (image_index &gt;= 29) &amp;&amp; (image_index &lt;= 36)
     {   
         if (instance_number(obj_hitbox) == 0)
         {
@@ -267,7 +321,7 @@ if (mode == 1)
             }
         }
     }
-    else if (image_index &gt; 10)
+    else if (image_index &gt; 36)
     {
         if (instance_exists(obj_hitbox))
         {

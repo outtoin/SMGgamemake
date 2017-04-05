@@ -42,9 +42,38 @@
     <sprite>sprites\spr_button1</sprite>
     <sprites name="effect">
       <sprites name="normal">
-        <sprite>sprites\spr_ice_effect_1</sprite>
-        <sprite>sprites\spr_thunder_effect_1</sprite>
+        <sprite>sprites\spr_cast_1</sprite>
+        <sprite>sprites\spr_cast_2</sprite>
+        <sprite>sprites\spr_cast_3</sprite>
+        <sprite>sprites\spr_cast_4</sprite>
+        <sprite>sprites\spr_cast_5</sprite>
+        <sprite>sprites\spr_cast_6</sprite>
+        <sprite>sprites\spr_cast_7</sprite>
+        <sprite>sprites\spr_cast_8</sprite>
+        <sprite>sprites\spr_cast_9</sprite>
+        <sprite>sprites\spr_darkness_1</sprite>
+        <sprite>sprites\spr_darkness_2</sprite>
+        <sprite>sprites\spr_effect_1</sprite>
+        <sprite>sprites\spr_effect_2</sprite>
+        <sprite>sprites\spr_effect_3</sprite>
+        <sprite>sprites\spr_fire_adapt</sprite>
         <sprite>sprites\spr_fire_effect_1</sprite>
+        <sprite>sprites\spr_fire_eruption</sprite>
+        <sprite>sprites\spr_heal_2</sprite>
+        <sprite>sprites\spr_heal_3</sprite>
+        <sprite>sprites\spr_ice_effect_1</sprite>
+        <sprite>sprites\spr_magic_1</sprite>
+        <sprite>sprites\spr_magic_3</sprite>
+        <sprite>sprites\spr_magic_4</sprite>
+        <sprite>sprites\spr_magic_6</sprite>
+        <sprite>sprites\spr_magic_7</sprite>
+        <sprite>sprites\spr_magic_8</sprite>
+        <sprite>sprites\spr_slash</sprite>
+        <sprite>sprites\spr_sword_blizzard</sprite>
+        <sprite>sprites\spr_sword_fire</sprite>
+        <sprite>sprites\spr_sword_slash</sprite>
+        <sprite>sprites\spr_sword_thunder</sprite>
+        <sprite>sprites\spr_thunder_effect_1</sprite>
         <sprite>sprites\spr_wind_effect_1</sprite>
       </sprites>
       <sprites name="resize">
@@ -89,6 +118,7 @@
     <background>background\GamoverBackground</background>
     <background>background\bgr_inn</background>
     <background>background\bgr_tutorial</background>
+    <background>background\Main2</background>
   </backgrounds>
   <paths name="paths"/>
   <scripts name="scripts">
@@ -129,12 +159,12 @@
       <object>objects\obj_bullet2_thunder</object>
       <object>objects\obj_bullet3</object>
       <object>objects\obj_bullet3_new1</object>
-      <object>objects\par_enemy</object>
       <object>objects\obj_enemy1</object>
-      <object>objects\obj_enemy2</object>
-      <object>objects\obj_enemy3</object>
-      <object>objects\obj_enemy2_orb</object>
       <object>objects\obj_enemy1_orb</object>
+      <object>objects\obj_enemy2</object>
+      <object>objects\obj_enemy2_orb</object>
+      <object>objects\obj_enemy3</object>
+      <object>objects\par_enemy</object>
     </objects>
     <objects name="system">
       <object>objects\obj_save</object>
@@ -179,6 +209,12 @@
     <object>objects\obj_dust</object>
     <object>objects\obj_dust2</object>
     <object>objects\obj_test</object>
+    <objects name="effect">
+      <object>objects\obj_cast_3</object>
+      <object>objects\obj_heal_3</object>
+      <object>objects\obj_heal_2</object>
+      <object>objects\obj_auto_shield</object>
+    </objects>
   </objects>
   <rooms name="rooms">
     <room>rooms\rm_start</room>
