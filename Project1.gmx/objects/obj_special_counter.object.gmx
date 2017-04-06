@@ -31,10 +31,12 @@ var sword_ice_level = ini_read_real("status", "sword_ice_level", 0);
 var sword_fire_level = ini_read_real("status", "sword_fire_level", 0);
 ini_close();
 is_thunder = sword_thunder_level &gt; 0;
-is_ice = sword_thunder_level &gt; 0;
+is_ice = sword_ice_level &gt; 0;
 is_fire = sword_fire_level &gt; 0;
 
 is_on = is_thunder || is_ice || is_fire;
+
+ini_close();
 </string>
           </argument>
         </arguments>
