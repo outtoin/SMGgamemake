@@ -26,9 +26,45 @@
           <argument>
             <kind>1</kind>
             <string>ini_open("save.ini");
-var sword_thunder_level = ini_read_real("status", "sword_thunder_level", 0);
-var sword_ice_level = ini_read_real("status", "sword_ice_level", 0);
-var sword_fire_level = ini_read_real("status", "sword_fire_level", 0);
+sword_thunder_level = ini_read_real("status", "sword_thunder_level", 0);
+sword_ice_level = ini_read_real("status", "sword_ice_level", 0);
+sword_fire_level = ini_read_real("status", "sword_fire_level", 0);
+ini_close();
+
+is_thunder = sword_thunder_level &gt; 0;
+is_ice = sword_ice_level &gt; 0;
+is_fire = sword_fire_level &gt; 0;
+
+is_on = is_thunder || is_ice || is_fire;
+
+on_special = noone;
+
+</string>
+          </argument>
+        </arguments>
+      </action>
+    </event>
+    <event eventtype="3" enumb="0">
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>ini_open("save.ini");
+sword_thunder_level = ini_read_real("status", "sword_thunder_level", 0);
+sword_ice_level = ini_read_real("status", "sword_ice_level", 0);
+sword_fire_level = ini_read_real("status", "sword_fire_level", 0);
 ini_close();
 is_thunder = sword_thunder_level &gt; 0;
 is_ice = sword_ice_level &gt; 0;
@@ -36,7 +72,32 @@ is_fire = sword_fire_level &gt; 0;
 
 is_on = is_thunder || is_ice || is_fire;
 
-ini_close();
+if (is_thunder) on_special = "Sword - Thunder"
+if (is_ice) on_special = "Sword - Ice"
+if (is_fire) on_special = "Sword - Fire"
+</string>
+          </argument>
+        </arguments>
+      </action>
+    </event>
+    <event eventtype="8" enumb="0">
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>draw_text(1000, 500, string(is_on));
 </string>
           </argument>
         </arguments>

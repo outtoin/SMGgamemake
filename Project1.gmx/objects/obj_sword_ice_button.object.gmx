@@ -53,13 +53,16 @@ can_upgrade = !(obj_special_counter.is_on);
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>ini_open("save.ini");
+            <string>is_ice = obj_special_counter.is_ice;
+can_upgrade = !(obj_special_counter.is_on);
+
+ini_open("save.ini");
 money = ini_read_real("status","money",0);
 sword_ice_level = ini_read_real("status", "sword_ice_level", 0);
 
 amount = 30000 + 15000 * sword_ice_level;
 
-if (mouse_check_button(mb_left)) &amp;&amp; (!is_click) &amp;&amp; position_meeting(mouse_x, mouse_y, obj_sword_ice_button)
+if (mouse_check_button_released(mb_left)) &amp;&amp; (!is_click) &amp;&amp; position_meeting(mouse_x, mouse_y, obj_sword_ice_button)
 {
     if(can_upgrade) || (is_ice)
     {
@@ -68,6 +71,8 @@ if (mouse_check_button(mb_left)) &amp;&amp; (!is_click) &amp;&amp; position_meet
             money -= amount;
             sword_ice_level += 1;
             is_click = true;
+            ini_write_real("status","money",money);
+            ini_write_real("status", "sword_ice_level", sword_ice_level);
         }
     }
     image_index = 1;
@@ -79,8 +84,7 @@ else
     is_click = false;
 }
 
-ini_write_real("status","money",money);
-ini_write_real("status", "sword_ice_level", sword_ice_level);
+
 ini_close();
 </string>
           </argument>
