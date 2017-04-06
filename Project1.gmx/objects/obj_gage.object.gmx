@@ -63,16 +63,6 @@ num_enemy = 0;
     }*/
 }
 
-if(instance_number(par_enemy)&gt;= num_enemy)
-{
-    num_enemy = instance_number(par_enemy);
-}
-if(instance_number(par_enemy)&lt; num_enemy)
-{
-    magnify_scr -= 5;
-    num_enemy = instance_number(par_enemy);
-}
-
 
 if (magnify_scr &gt;=20) magnify_time = 0.1*magnify_scr;
 if (magnify_scr &gt;=25) magnify_time = 0.2*magnify_scr;

@@ -52,7 +52,8 @@ var highscore = ini_read_real("status","highscore",0);
 ini_close();
 
 draw_set_color(c_black);
-draw_text(672,256,highscore);
+draw_sprite(spr_highscore, 0, 100, 336);
+draw_text(130,336,string(highscore) + " pt");
 </string>
           </argument>
         </arguments>

@@ -45,12 +45,20 @@ jbuff = 0;
 hit = false;
 hp = 10;
 time = 0;
+
 gap = random_range(120,180);
+gap_multiplier = 1.00;
+
 ypos = y;
 obj_char.kill = 0;
 
 motion = 0;
 
+original_blend = image_blend;
+original_gap = gap;
+
+ 
+is_paralyzed = false;
 </string>
           </argument>
         </arguments>
@@ -75,6 +83,9 @@ motion = 0;
             <kind>1</kind>
             <string>event_inherited();
 
+//gap variance
+if (gap_multiplier &gt; 0.4) gap_multiplier -= 0.0001;
+
 if (x &gt; 950) 
 {
     sprite_index = spr_enemy1_walk;
@@ -88,7 +99,7 @@ else
 
 //bullet 1
 if(obj_char.mode == 0) time += 1;
-if(time &gt; gap)
+if(time &gt; (gap * gap_multiplier))
 {
     image_index = 1;
     instance_create(x - 30, y, obj_enemy1_orb);
@@ -96,7 +107,7 @@ if(time &gt; gap)
     motion = 1;
     time = 0;
 }
-else if (time &lt;= gap)
+else if (time &lt;= (gap * gap_multiplier))
 {
     motion = Approach(motion, 0, 0.1);   
     if (motion == 0) image_index = 0;

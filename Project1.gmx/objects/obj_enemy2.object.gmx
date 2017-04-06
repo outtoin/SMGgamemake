@@ -49,6 +49,11 @@ ypos = y;
 obj_char.kill = 0;
 
 motion = 0;
+
+original_blend = image_blend;
+original_gap = gap;
+
+is_paralyzed = false;
 </string>
           </argument>
         </arguments>

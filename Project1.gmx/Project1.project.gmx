@@ -19,6 +19,9 @@
     <sound>sound\BGM_startmenu</sound>
     <sound>sound\sfx_bullet_2</sound>
     <sound>sound\sfx_bullet_3</sound>
+    <sound>sound\sfx_sword_thunder</sound>
+    <sound>sound\sfx_sword_ice</sound>
+    <sound>sound\sfx_sword_slash</sound>
   </sounds>
   <sprites name="sprites">
     <sprite>sprites\tile1</sprite>
@@ -45,12 +48,15 @@
     <sprites name="effect">
       <sprites name="normal">
         <sprite>sprites\spr_cast_1</sprite>
+        <sprite>sprites\spr_cast_invincible</sprite>
         <sprite>sprites\spr_cast_2</sprite>
+        <sprite>sprites\spr_cast_freeze</sprite>
         <sprite>sprites\spr_cast_3</sprite>
         <sprite>sprites\spr_cast_4</sprite>
         <sprite>sprites\spr_cast_5</sprite>
         <sprite>sprites\spr_cast_6</sprite>
         <sprite>sprites\spr_cast_7</sprite>
+        <sprite>sprites\spr_cast_paralyze</sprite>
         <sprite>sprites\spr_cast_8</sprite>
         <sprite>sprites\spr_cast_9</sprite>
         <sprite>sprites\spr_darkness_1</sprite>
@@ -114,6 +120,18 @@
       <sprite>sprites\spr_enemy3_new</sprite>
     </sprites>
     <sprite>sprites\spr_tut</sprite>
+    <sprites name="button">
+      <sprite>sprites\spr_hp_button</sprite>
+      <sprite>sprites\spr_healing_button</sprite>
+      <sprite>sprites\spr_shield_button</sprite>
+      <sprite>sprites\spr_fire_sword_button</sprite>
+      <sprite>sprites\spr_ice_sword_button</sprite>
+      <sprite>sprites\spr_thunder_sword_button</sprite>
+      <sprite>sprites\spr_reset_button</sprite>
+    </sprites>
+    <sprite>sprites\spr_money</sprite>
+    <sprite>sprites\spr_health</sprite>
+    <sprite>sprites\spr_highscore</sprite>
   </sprites>
   <backgrounds name="background">
     <background>background\GameBackground</background>
@@ -145,7 +163,6 @@
     <object>objects\obj_hitbox</object>
     <object>objects\obj_orb_score</object>
     <object>objects\obj_orb_health</object>
-    <object>objects\obj_gage</object>
     <object>objects\text_score</object>
     <object>objects\snd_mainmenu</object>
     <object>objects\snd_startmenu</object>
@@ -170,19 +187,21 @@
       <object>objects\par_enemy</object>
     </objects>
     <objects name="system">
-      <object>objects\obj_save</object>
+      <object>objects\obj_bombcounter</object>
+      <object>objects\obj_calc</object>
+      <object>objects\obj_enemy_afterimage</object>
       <object>objects\obj_enemyspawn</object>
+      <object>objects\obj_gage</object>
+      <object>objects\obj_gameover</object>
+      <object>objects\obj_health</object>
+      <object>objects\obj_loading</object>
       <object>objects\obj_menu</object>
       <object>objects\obj_menu_option</object>
-      <object>objects\obj_health</object>
-      <object>objects\obj_gameover</object>
       <object>objects\obj_orbspawn</object>
-      <object>objects\obj_enemy_afterimage</object>
-      <object>objects\obj_bombcounter</object>
-      <object>objects\obj_tutorial_end</object>
-      <object>objects\obj_calc</object>
-      <object>objects\obj_loading</object>
+      <object>objects\obj_room_shake</object>
+      <object>objects\obj_save</object>
       <object>objects\obj_tip</object>
+      <object>objects\obj_tutorial_end</object>
     </objects>
     <objects name="Testing_ssh">
       <object>objects\obj_enemy_afterimage_test</object>
@@ -193,10 +212,17 @@
       <object>objects\obj_char_test</object>
     </objects>
     <objects name="mainmenu">
-      <object>objects\obj_startswitch</object>
       <object>objects\obj_highscore</object>
+      <object>objects\obj_special_counter</object>
+      <object>objects\obj_startswitch</object>
       <object>objects\obj_status</object>
       <object>objects\obj_upgrade</object>
+      <object>objects\obj_healing_button</object>
+      <object>objects\obj_shield_button</object>
+      <object>objects\obj_sword_fire_button</object>
+      <object>objects\obj_sword_ice_button</object>
+      <object>objects\obj_sword_thunder_button</object>
+      <object>objects\obj_reset_button</object>
     </objects>
     <object>objects\obj_missiles</object>
     <object>objects\obj_exit</object>
@@ -212,12 +238,26 @@
     <object>objects\obj_dust</object>
     <object>objects\obj_dust2</object>
     <object>objects\obj_test</object>
-	<object>objects\obj_tut</object>
+    <object>objects\obj_tut</object>
     <objects name="effect">
       <object>objects\obj_cast_3</object>
       <object>objects\obj_heal_3</object>
       <object>objects\obj_heal_2</object>
       <object>objects\obj_auto_shield</object>
+      <object>objects\obj_cast_thunder</object>
+      <object>objects\obj_cast_fire</object>
+      <object>objects\obj_cast_ice</object>
+      <object>objects\obj_sword_thunder</object>
+      <object>objects\obj_sword_fire</object>
+      <object>objects\obj_sword_ice</object>
+      <object>objects\obj_cast_invincible</object>
+      <object>objects\obj_cast_freeze</object>
+      <object>objects\obj_cast_paralyze</object>
+    </objects>
+    <objects name="ingame board">
+      <object>objects\obj_healing_board</object>
+      <object>objects\obj_special_board</object>
+      <object>objects\obj_shield_board</object>
     </objects>
   </objects>
   <rooms name="rooms">

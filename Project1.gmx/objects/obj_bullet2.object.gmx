@@ -57,7 +57,6 @@ if (obj_char.mode==1) image_speed = 0;
 if (image_index &gt; image_number-1)
 {
     instance_create(obj_char.x, obj_char.y - 42, obj_bullet2_thunder);
-    audio_play_sound(sfx_bullet_2,1,false);
     instance_destroy();
 }
 

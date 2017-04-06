@@ -28,6 +28,7 @@
             <string>img_speed = 0.4;
 
 is_hit = false;
+audio_play_sound(sfx_bullet_2,1,false);
 </string>
           </argument>
         </arguments>
@@ -50,7 +51,7 @@ is_hit = false;
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>if (obj_char.mode == 0 &amp;&amp; !is_hit &amp;&amp; image_index &gt; 4)
+            <string>if (obj_char.mode == 0 &amp;&amp; !is_hit &amp;&amp; image_index &gt; 4) &amp;&amp; (instance_number(obj_auto_shield) == 0) &amp;&amp; (instance_number(obj_cast_invincible) == 0)
 {
     obj_char.char_hit = 1;
     if (obj_char.hp &gt; 10)
@@ -61,6 +62,7 @@ is_hit = false;
     is_hit = true;
     //audio_play_sound(sfx_hit_1,1,false);
 }
+
 image_speed = img_speed;
 if(image_index &gt; 18) instance_destroy();
 </string>

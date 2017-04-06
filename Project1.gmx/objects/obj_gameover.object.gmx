@@ -57,7 +57,7 @@ if (keyboard_check_released(ord("R")) == 1)
     instance_create(0, 0, obj_fade_to_loading);
 }
 
-if (keyboard_check_released(vk_space) == 1)
+if (keyboard_check_released(vk_enter) == 1)
 {
     instance_create(0, 0, obj_fade_to_mainmenu);
 }
@@ -88,7 +88,7 @@ draw_set_color(c_white) ;
 
 draw_text(x,y,"Gameover!!!");
 draw_text(x-16,y+48,"Your Score : " + string(score));
-draw_text(x-48,y+96,"Press Space to menu");
+draw_text(x-48,y+96,"Press Enter to menu");
 draw_text(x-32,y+144,"Press R to replay");
 </string>
           </argument>

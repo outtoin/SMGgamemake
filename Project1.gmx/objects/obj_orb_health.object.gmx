@@ -94,7 +94,7 @@ if(obj_char.mode == 0)
 {
     audio_play_sound(sfx_coin_2,1,false);
     instance_destroy();
-    obj_char.hp = obj_char.hp + 15 ;
+    obj_char.hp = obj_char.hp + round(((hp - obj_char.hp) / hp) * 40);
     if (obj_char.hp &gt; hp) obj_char.hp = hp;
 }
 </string>

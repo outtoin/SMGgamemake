@@ -27,8 +27,8 @@
             <kind>1</kind>
             <string>///Initialize Variables
 ini_open("save.ini");
-hp = ini_read_real("status","hp",50);
-ini_close();
+original_hp = ini_read_real("status","hp",50);
+hp = original_hp;
 
 grav = 1;
 hsp = 0;
@@ -58,19 +58,43 @@ is_hit = false;
 special_time = 0;
 
 //automatic healing
-healing_level = 1;
+healing_level = ini_read_real("status", "healing_level", 0);
 healing_timer = 0;
-healing_term = 600 - healing_level * 42;
-healing_amount = 3;
+healing_term = 600 - healing_level * 40;
+healing_amount = round(3 + healing_level * 0.7);
 
 //automatic shield
-shield_level = 20;
+shield_level = ini_read_real("status", "shield_level", 0);
 shield_term_timer = 0;
 shield_term = 1000 - shield_level * 20;
 shield_timer = 0;
 shield_time = 60 + 6 * shield_level;
 
 //special_attack
+special_term = 30;
+special_timer = 0;
+special_ready = false;
+is_cast = false;
+
+timer_on = true;
+//special - sword/thunder
+sword_thunder_level = ini_read_real("status", "sword_thunder_level", 0);
+sword_thunder_effect_time = (60 * sword_thunder_level * 0.5) + (60 * 6.5)
+sword_thunder_effect_amount = sword_thunder_level * 0.25 + 1.5;
+
+//special - sword/ice
+sword_ice_level = ini_read_real("status", "sword_ice_level", 0);
+sword_ice_effect_time = (60 * sword_ice_level * 0.3) + (60 * 3.7);
+
+//special - sword/fire
+sword_fire_level = ini_read_real("status", "sword_fire_level", 0);
+sword_fire_effect_time = (60 * sword_fire_level * 0.2) + (60 * 0.9);
+
+
+//special settings
+is_special = (sword_thunder_level &gt; 0) || (sword_ice_level &gt; 0) || (sword_fire_level &gt; 0);
+
+ini_close();
 </string>
           </argument>
         </arguments>
@@ -241,6 +265,7 @@ if (mode == 0)
             instance_create(x-5, y-40, obj_heal_3);
             healing_timer = 0;
             hp += healing_amount;
+            if(hp &gt; original_hp) hp = original_hp;
         }
     }
     
@@ -254,17 +279,51 @@ if (mode == 0)
             shield_term_timer = 0;
         }
     }
-
     
-    
-    
-    
-    
-    
-    
-    
-    
-    
+    //special attack
+    if (key_special) &amp;&amp; (bomb &gt;= 5) &amp;&amp; (is_special) &amp;&amp; (special_ready)
+    {
+        //special - sword/thunder
+        if (sword_thunder_level &gt; 0)
+        {
+            if (!is_cast)
+            {
+                instance_create(x-5, y, obj_cast_thunder);
+                is_cast = true;
+                special_ready = false;
+                bomb -= 5;
+                timer_on = true;
+                special_term = 30;
+            }
+        }
+        
+        if (sword_ice_level &gt; 0)
+        {
+            if (!is_cast)
+            {
+                instance_create(x-5, y, obj_cast_ice);
+                is_cast = true;
+                special_ready = false;
+                bomb -= 5;
+                timer_on = true;
+                special_term = 30;
+            }
+        }
+        
+        if (sword_fire_level &gt; 0)
+        {
+            if(!is_cast)
+            {
+                instance_create(x-5, y, obj_cast_fire);
+                is_cast = true;
+                special_ready = false;
+                bomb -=5;
+                timer_on = true;
+                special_term = 30;
+            }
+        }   
+    }
+    else if (!key_special) is_cast = false;
     
     y += vsp;
 }
@@ -286,17 +345,17 @@ if (mode == 1)
     if(key_act &amp;&amp; bomb&gt;0)
     {
         audio_play_sound(sfx_atk_1,1,false);
-        sprite_index = spr_char_atk_shadow;
+        sprite_index = spr_char_atk_fire;
         image_speed = atk_img_spd;
         bomb -=1;
         is_dust = false;
     }
     
-    if (sprite_index == spr_char_atk_shadow) &amp;&amp; (image_index &gt;= 5) &amp;&amp; (image_index &lt;= 8)
+    if (sprite_index == spr_char_atk_fire) &amp;&amp; (image_index &gt;= 2) &amp;&amp; (image_index &lt;= 4)
     {
         if (!is_dust)
         {
-            repeat(choose(6,9)) instance_create(bbox_left, y + 10, obj_dust2);
+            repeat(choose(4,6)) instance_create(bbox_left, y, obj_dust2);
             is_dust = true;
         }
         
@@ -304,7 +363,7 @@ if (mode == 1)
     
     // Hitbox
     var hitbox = noone;
-    if (sprite_index == spr_char_atk_shadow) &amp;&amp; (image_index &gt;= 29) &amp;&amp; (image_index &lt;= 36)
+    if (sprite_index == spr_char_atk_fire) &amp;&amp; (image_index &gt;= 2) &amp;&amp; (image_index &lt;= 10)
     {   
         if (instance_number(obj_hitbox) == 0)
         {
@@ -318,10 +377,11 @@ if (mode == 1)
             {
                 enemy.hit = true;
                 is_hit = true;
+                obj_gage.magnify_scr -= 5.0;
             }
         }
     }
-    else if (image_index &gt; 36)
+    else if (image_index &gt; 11)
     {
         if (instance_exists(obj_hitbox))
         {
@@ -346,7 +406,7 @@ if (mode == 1)
 }
 
 //Bomb
-if (bomb_stack == 4)
+if (bomb_stack &gt;= 4)
 {
     bomb +=1;
     bomb_stack=0;
@@ -362,6 +422,20 @@ if (time==30)
 {
         time = 0;
         hp -= 1;
+}
+//Special timer
+if (timer_on = true) special_timer += 1;
+
+if (special_timer == 60)
+{
+    special_term -= 1;
+    special_timer = 0;
+}
+
+if (special_term == 0)
+{
+    special_ready = true;
+    timer_on = false;
 }
 //Gameover
 if (hp==0){

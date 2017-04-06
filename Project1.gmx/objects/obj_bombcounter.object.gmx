@@ -102,6 +102,12 @@ draw_set_colour(c_black);
         //raw_text(28+i*36,60,bomb[i]);
         draw_sprite(spr_atk_bomb,bomb[i],28+i*36,68);
     }
+
+draw_set_font(FFFforward);
+draw_text(200, 68, obj_char.special_term);
+
+if (obj_char.special_ready) draw_text(230, 68, "READY!");
+else draw_text(230, 68, "Reloading...");
 </string>
           </argument>
         </arguments>

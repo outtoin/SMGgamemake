@@ -28,13 +28,18 @@
             <string>ini_open("save.ini");
 var money = ini_read_real("status","money",0);
 var hp = ini_read_real("status","hp",50);
+var healing_level = ini_read_real("status", "healing_level", 0);
+var shield_level = ini_read_real("status", "shield_level", 0);
+var sword_thunder_level = ini_read_real("status", "sword_thunder_level", 0);
+var sword_ice_level = ini_read_real("status", "sword_ice_level", 0);
+var sword_fire_level = ini_read_real("status", "sword_fire_level", 0);
 ini_close();
 
 draw_set_color(c_black);
-draw_text(224,384,"money");
-draw_text(352,384,money);
-draw_text(224,432,"hp");
-draw_text(352,432,hp);
+draw_sprite(spr_money,0,100,384);
+draw_text(130,384,string(money) + " gold");
+draw_sprite(spr_health,0,100,432);
+draw_text(130,432,hp);
 </string>
           </argument>
         </arguments>

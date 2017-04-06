@@ -30,8 +30,8 @@ enemy = obj_enemy1;
 dice = random_range(0,60)
 
 if (dice &gt;= 0 &amp;&amp; dice &lt; 40) enemy = obj_enemy1;
-else if (dice &gt;= 40 &amp;&amp; dice &lt; 50) enemy = obj_enemy1;
-else enemy = obj_enemy1;
+else if (dice &gt;= 40 &amp;&amp; dice &lt; 50) enemy = obj_enemy2;
+else enemy = obj_enemy3;
 
 enemy_id = instance_create(x, y, enemy);
 </string>
